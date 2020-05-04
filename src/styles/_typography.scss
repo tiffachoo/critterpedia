@@ -1,0 +1,15 @@
+@import 'https://fonts.googleapis.com/css?family=Varela+Round&display=swap';
+
+body {
+	background-color: var(--white);
+	font-family: $primary-font-family;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.35;
+	color: var(--black);
+}
+
+h1 {
+	font-family: $primary-font-family;
+	font-size: 4rem;
+}

@@ -1,1 +1,12 @@
+$black: #444;
+$white: #fff;
+
 $primary-color: aqua;
+$primary-color-tint: lighten($primary-color, 20%);
+
+$primary-font-family: 'Varela Round', 'Roboto', sans-serif;
+$heading-font-family: $primary-font-family;
+
+$spacer-sm: 0.5rem;
+$spacer: 1rem;
+$spacer-lg: 2rem;

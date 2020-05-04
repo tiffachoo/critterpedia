@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+
+:root {
+	--black: #{$black};
+	--white: #{$white};
+	--primary-color: #{$primary-color};
+	--primary-color-tint: #{$primary-color-tint};
+
+	--spacer-sm: #{$spacer-sm};
+	--spacer: #{$spacer};
+	--spacer-lg: #{$spacer-lg};
+}
+
+@import 'reset';
+@import 'typography';
+@import 'layout';
