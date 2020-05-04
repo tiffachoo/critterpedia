@@ -1,12 +1,16 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import home from './components/CritterList.vue';
+import main from './components/CritterList.vue';
 
 export default new Router({
 	routes: [
 		{
 			path: '/',
-			component: home
+			component: main
+		},
+		{
+			path: '/:type',
+			component: main
 		}
 	]
 });

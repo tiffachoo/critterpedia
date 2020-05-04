@@ -1,9 +1,14 @@
 <template>
-	<div class="critter-list">
-		<h1>
-			Critters
-		</h1>
-		<!-- <input type="radio"> -->
+	<section class="critter-list">
+		<header>
+			<h2>
+				{{ $route.params.type }}
+			</h2>
+		</header>
+		<!-- filters: table / grid view, north / south, location, month, time(?) -->
+		<!-- <div class="critter-filter">
+			<input type="radio" >
+		</div> -->
 		<ul class="critter-list-content">
 			<critter
 				v-for="critter in critters"
@@ -12,7 +17,7 @@
 			/>
 		</ul>
 		<!-- <table></table> -->
-	</div>
+	</section>
 </template>
 
 <script>
@@ -34,8 +39,6 @@ export default {
 
 <style lang="scss">
 .critter-list {
-	flex: 0 0 100%; 
-
 	&-content {
 		display: grid;
 		grid-gap: var(--spacer);

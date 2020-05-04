@@ -2394,7 +2394,7 @@
 			"price": 15000,
 			"shadow": "6",
 			"location": "Sea",
-			"locationDetail": "Raining",
+			"locationDetail": "Rainy days",
 			"time": {
 				"start": "0:00",
 				"end": "24:00"
