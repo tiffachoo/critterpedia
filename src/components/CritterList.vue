@@ -11,7 +11,7 @@
 		</div> -->
 		<ul class="critter-list-content">
 			<critter
-				v-for="critter in critters"
+				v-for="critter in displayedCritters"
 				:key="critter.id"
 				:name="critter.name"
 			/>
@@ -31,8 +31,24 @@ export default {
 	},
 	data() {
 		return {
-			critters: data
+			critters: data,
+			selectedMonth: '',
+			selectedHemis: 'south',
+			selectedLocation: '',
+			selectedLayout: 'grid'
 		}
+	},
+	computed: {
+		displayedCritters() {
+			return this.critters.filter(critter => {
+				return critter['months'][this.selectedHemis].includes(this.selectedMonth);
+			});
+		}
+	},
+	mounted() {
+		this.selectedMonth = new Date().getMonth() + 1;
+	},
+	methods: {
 	}
 }
 </script>
