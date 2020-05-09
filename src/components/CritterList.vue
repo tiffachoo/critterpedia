@@ -14,13 +14,18 @@
 				aria-label="Select a month"
 			/>
 		</div>
-		<ul class="critter-list-content">
+		<transition-group
+			class="critter-list-content"
+			mode="in-out"
+			name="critter-transition"
+			tag="ul"
+		>
 			<critter
 				v-for="critter in displayedCritters"
 				:key="critter.id"
 				:name="critter.name"
 			/>
-		</ul>
+		</transition-group>
 		<!-- <table></table> -->
 	</section>
 </template>
@@ -113,9 +118,25 @@ export default {
 <style lang="scss">
 .critter-list {
 	&-content {
+		position: relative;
 		display: grid;
 		grid-gap: var(--spacer);
 		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+	}
+}
+
+.critter {
+	transition: 0.5s;
+}
+
+.critter-transition {
+	// &-leave-active {
+	// 	position: absolute;
+	// }
+
+	&-enter,
+	&-leave-to {
+		opacity: 0;
 	}
 }
 </style>
