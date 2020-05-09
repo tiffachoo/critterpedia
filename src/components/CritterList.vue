@@ -6,9 +6,14 @@
 			</h2>
 		</header>
 		<!-- filters: table / grid view, north / south, location, month, time(?) -->
-		<!-- <div class="critter-filter">
-			<input type="radio" >
-		</div> -->
+		<div class="critter-list-filter">
+			<selector 
+				id="selectMonth"
+				v-model.number="selectedMonth"
+				:options="months"	
+				aria-label="Select a month"
+			/>
+		</div>
 		<ul class="critter-list-content">
 			<critter
 				v-for="critter in displayedCritters"
@@ -21,21 +26,73 @@
 </template>
 
 <script>
-import Critter from './Critter.vue'
+import Critter from './Critter.vue';
+import Selector from './Selector.vue';
 import { data } from '../data/fish.json';
 
 export default {
 	name: 'CritterList',
 	components: {
 		Critter,
+		Selector
 	},
 	data() {
 		return {
 			critters: data,
-			selectedMonth: '',
 			selectedHemis: 'south',
 			selectedLocation: '',
-			selectedLayout: 'grid'
+			selectedLayout: 'grid',
+			selectedMonth: 1,
+			months: [
+				{
+					value: 1,
+					text: 'January'
+				},
+				{
+					value: 2,
+					text: 'February'
+				},
+				{
+					value: 3,
+					text: 'March'
+				},
+				{
+					value: 4,
+					text: 'April'
+				},
+				{
+					value: 5,
+					text: 'May'
+				},
+				{
+					value: 6,
+					text: 'June'
+				},
+				{
+					value: 7,
+					text: 'July'
+				},
+				{
+					value: 8,
+					text: 'August'
+				},
+				{
+					value: 9,
+					text: 'September'
+				},
+				{
+					value: 10,
+					text: 'October'
+				},
+				{
+					value: 11,
+					text: 'November'
+				},
+				{
+					value: 12,
+					text: 'December'
+				}
+			]	
 		}
 	},
 	computed: {
