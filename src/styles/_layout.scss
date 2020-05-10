@@ -8,6 +8,29 @@
 	padding-right: var(--spacer);
 }
 
+.container-grid {
+	display: grid;
+	grid-gap: var(--spacer);
+	grid-template-areas: 
+		'header nav'
+		'main main';
+	grid-template-columns: 2fr 1fr;
+}
+
+.header {
+	grid-area: header;
+}
+
+.nav {
+	grid-area: nav;
+	align-self: center;
+	justify-self: end;
+}
+
+.main {
+	grid-area: main;
+}
+
 .header, 
 .nav, 
 .main {

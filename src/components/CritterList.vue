@@ -1,10 +1,5 @@
 <template>
 	<section class="critter-list">
-		<header>
-			<h2>
-				{{ $route.params.type }}
-			</h2>
-		</header>
 		<!-- filters: table / grid view, north / south, location, month, time(?) -->
 		<div class="critter-list-filter">
 			<selector 
@@ -125,6 +120,13 @@ export default {
 		display: grid;
 		grid-gap: var(--spacer);
 		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+	}
+
+	&-filter {
+		padding: var(--spacer-lg) var(--spacer);
+		margin-bottom: var(--spacer);
+		border-radius: $border-radius;
+		background-color: var(--grey-tint);
 	}
 }
 

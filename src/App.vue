@@ -1,9 +1,15 @@
 <template>
 	<div id="app">
-		<div class="container">
+		<div class="container container-grid">
 			<header class="header">
 				<h1>
-					Critters
+					Critterpedia
+					<small 
+						v-if="$route.params.type"
+						class="h1-small"
+					>
+						{{ $route.params.type }}
+					</small>
 				</h1>
 			</header>
 			<nav class="nav">
