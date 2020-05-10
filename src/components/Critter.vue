@@ -1,10 +1,9 @@
 <template>
 	<li class="critter">
-		<img 
-			:alt="`Thumbnail of ${name}`"
+		<div 
 			class="critter-image"
-			src="" 
-		>
+			:style="{ backgroundImage: `url('${image}')`, backgroundPosition }"
+		/>
 		<span class="critter-text">
 			{{ name }}
 		</span>
@@ -15,7 +14,16 @@
 export default {
 	name: 'Critter',
 	props: {
+		id: Number,
+		image: String,
 		name: String
+	},
+	computed: {
+		backgroundPosition() {
+			const x = ((this.id - 1) % 10) / 9 * 100;
+			const y = parseInt(this.id / 10 - 0.1) / 7 * 100;
+			return `${x}% ${y}%`
+		}
 	}
 }
 </script>
@@ -32,11 +40,13 @@ export default {
 
 	&-image {
 		display: inline-block;
+		height: 100px;
 		width: 100%;
 		max-width: 6rem;
 		margin-bottom: var(--spacer-sm);
 		border-radius: 100%;
 		background-color: var(--primary-color-tint);
+		background-size: 1000%;
 	}
 
 	&-text {

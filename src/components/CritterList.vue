@@ -21,8 +21,10 @@
 			tag="ul"
 		>
 			<critter
-				v-for="critter in displayedCritters"
+				v-for="critter in critters"
+				:id="critter.id"
 				:key="critter.id"
+				:image="critterImage"
 				:name="critter.name"
 			/>
 		</transition-group>
@@ -31,6 +33,7 @@
 </template>
 
 <script>
+import critterImage from '../assets/acnh-fish-sprites.png';
 import Critter from './Critter.vue';
 import Selector from './Selector.vue';
 import { data } from '../data/fish.json';
@@ -43,6 +46,7 @@ export default {
 	},
 	data() {
 		return {
+			critterImage,
 			critters: data,
 			selectedHemis: 'south',
 			selectedLocation: '',
@@ -107,7 +111,7 @@ export default {
 			});
 		}
 	},
-	mounted() {
+	beforeMount() {
 		this.selectedMonth = new Date().getMonth() + 1;
 	},
 	methods: {
