@@ -46,7 +46,7 @@ export default {
 		margin-bottom: var(--spacer-sm);
 		border-radius: 100%;
 		background-color: var(--primary-color-tint);
-		background-size: 1000%;
+		background-size: 1010%;
 	}
 
 	&-text {
