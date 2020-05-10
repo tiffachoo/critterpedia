@@ -16,12 +16,11 @@
 		</div>
 		<transition-group
 			class="critter-list-content"
-			mode="in-out"
 			name="critter-transition"
 			tag="ul"
 		>
 			<critter
-				v-for="critter in critters"
+				v-for="critter in displayedCritters"
 				:id="critter.id"
 				:key="critter.id"
 				:image="critterImage"
@@ -48,7 +47,7 @@ export default {
 		return {
 			critterImage,
 			critters: data,
-			selectedHemis: 'south',
+			selectedHemis: 'north',
 			selectedLocation: '',
 			selectedLayout: 'grid',
 			selectedMonth: 1,
@@ -129,14 +128,16 @@ export default {
 	}
 }
 
-.critter {
-	transition: 0.5s;
-}
-
 .critter-transition {
-	// &-leave-active {
-	// 	position: absolute;
-	// }
+	&-move,
+	&-enter-active {
+		transition: 0.5s ease-in-out;
+	}
+
+	&-leave-active {
+		position: absolute;
+		opacity: 0;
+	}
 
 	&-enter,
 	&-leave-to {
