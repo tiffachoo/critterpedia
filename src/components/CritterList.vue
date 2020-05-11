@@ -128,6 +128,9 @@ export default {
 	}
 
 	&-filter {
+		display: grid;
+		grid-gap: var(--spacer);
+		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 		padding: var(--spacer-lg) var(--spacer);
 		margin-bottom: var(--spacer);
 		border-radius: $border-radius;

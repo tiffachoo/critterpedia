@@ -10,13 +10,15 @@ body {
 }
 
 h1 {
-	font-family: $primary-font-family;
+	font-family: $heading-font-family;
 	font-size: 4rem;
+	line-height: 1.125;
 }
 
 h2 {
-	font-family: $primary-font-family;
+	font-family: $heading-font-family;
 	font-size: 2rem;
+	line-height: 1.125;
 }
 
 .heading-boxed {
