@@ -1,14 +1,19 @@
 <template>
 	<section class="critter-list">
-		<!-- filters: table / grid view, north / south, location, month, time(?) -->
-		<div class="critter-list-filter">
-			<selector 
-				id="selectMonth"
-				v-model.number="selectedMonth"
-				:options="months"	
-				aria-label="Select a month"
-			/>
-		</div>
+		<header>
+			<h2 class="heading-boxed">
+				{{ $route.params.type }}
+			</h2>
+			<!-- filters: table / grid view, north / south, location, month, time(?) -->
+			<div class="critter-list-filter">
+				<selector 
+					id="selectMonth"
+					v-model.number="selectedMonth"
+					:options="months"	
+					aria-label="Select a month"
+				/>
+			</div>
+		</header>
 		<transition-group
 			class="critter-list-content"
 			name="critter-transition"

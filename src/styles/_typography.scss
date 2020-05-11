@@ -19,7 +19,13 @@ h2 {
 	font-size: 2rem;
 }
 
-.h1-small {
-	font-size: 0.5em;
-	color: var(--grey);
+.heading-boxed {
+	display: inline-block;
+	padding: var(--spacer-sm) var(--spacer);
+	margin-bottom: calc(-1 * var(--spacer));
+	transform: rotate(-5deg);
+	border-radius: $border-radius;
+	background-color: var(--primary-color-dark);
+	line-height: 1;
+	color: var(--white);
 }

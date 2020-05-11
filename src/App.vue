@@ -4,12 +4,6 @@
 			<header class="header">
 				<h1>
 					Critterpedia
-					<small 
-						v-if="$route.params.type"
-						class="h1-small"
-					>
-						{{ $route.params.type }}
-					</small>
 				</h1>
 			</header>
 			<nav class="nav">

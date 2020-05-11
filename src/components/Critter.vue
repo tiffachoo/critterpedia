@@ -35,18 +35,17 @@ export default {
 	justify-content: space-between;
 	align-items: center;
 	padding: var(--spacer);
-	background-color: var(--primary-color);
+	background-color: var(--primary-color-tint);
 	text-align: center;
 
 	&-image {
 		display: inline-block;
-		height: 100px;
-		width: 100%;
-		max-width: 6rem;
+		height: 6rem;
+		width: 6rem;
 		margin-bottom: var(--spacer-sm);
 		border-radius: 100%;
-		background-color: var(--primary-color-tint);
-		background-size: 1010%;
+		background-color: var(--primary-color);
+		background-size: 1000%;
 	}
 
 	&-text {
