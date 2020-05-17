@@ -6,7 +6,7 @@
 			</h2>
 			<!-- filters: table / grid view, north / south, location, month, time(?) -->
 			<div class="critter-list-filter">
-				<selector 
+				<cp-selector 
 					id="selectMonth"
 					v-model.number="selectedMonth"
 					:options="months"	
@@ -19,7 +19,7 @@
 			name="critter-transition"
 			tag="ul"
 		>
-			<critter
+			<cp-critter
 				v-for="critter in displayedCritters"
 				:id="critter.id"
 				:key="critter.id"
@@ -33,15 +33,15 @@
 
 <script>
 import critterImage from '../assets/acnh-fish-sprites.png';
-import Critter from './Critter.vue';
-import Selector from './Selector.vue';
+import CpCritter from './Critter.vue';
+import CpSelector from './Selector.vue';
 import { data } from '../data/fish.json';
 
 export default {
-	name: 'CritterList',
+	name: 'CpCritterList',
 	components: {
-		Critter,
-		Selector
+		CpCritter,
+		CpSelector
 	},
 	data() {
 		return {

@@ -28,7 +28,7 @@
 
 <script>
 export default {
-	name: 'Selector',
+	name: 'CpSelector',
 	inheritAttrs: false,
 	props: {
 		options: Array,

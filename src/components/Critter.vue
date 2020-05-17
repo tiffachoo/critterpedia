@@ -12,7 +12,7 @@
 
 <script>
 export default {
-	name: 'Critter',
+	name: 'CpCritter',
 	props: {
 		id: Number,
 		image: String,
