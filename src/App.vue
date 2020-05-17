@@ -7,18 +7,18 @@
 				</h1>
 			</header>
 			<nav class="nav">
-				<router-link
+				<cp-button
 					class="nav-link"
 					to="/bugs"
 				>
-					<span class="nav-link-text">Bugs</span>
-				</router-link>
-				<router-link
+					Bugs
+				</cp-button>
+				<cp-button
 					class="nav-link"
 					to="/fish"
 				>
-					<span class="nav-link-text">Fish</span>
-				</router-link>
+					Fish
+				</cp-button>
 			</nav>
 			<main class="main">
 				<router-view />
@@ -28,9 +28,11 @@
 </template>
 
 <script>
+import CpButton from './components/Button'
 export default {
 	name: 'App',
 	components: {
+		CpButton
 	}
 }
 </script>
