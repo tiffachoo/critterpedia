@@ -12,7 +12,8 @@ export default new Router({
 			path: '/:type',
 			component: main
 		}
-	]
+	],
+	linkActiveClass: 'active'
 });
 
 Vue.use(Router);

@@ -37,10 +37,14 @@ export default {
 	color: var(--button-color);
 	text-decoration: none;
 
-	&:hover {
+	&:hover:not(.active) {
 		background-image: repeating-linear-gradient(-45deg, var(--button-hover-color-1), var(--button-hover-color-1) 25%, var(--button-hover-color-2) 25%, var(--button-hover-color-2) 50%);
 		background-size: 1.5rem 1.5rem;
 		animation: diagShift 0.5s infinite linear;
+	}
+
+	&.active {
+		--button-background-color: var(--primary-color-dark);
 	}
 }
 
