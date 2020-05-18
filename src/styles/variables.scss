@@ -1,3 +1,6 @@
+// variables
+// -----------------------------------
+
 $black: #444;
 $grey: #777;
 $grey-tint: #eee;
@@ -16,3 +19,16 @@ $spacer-lg: 2rem;
 
 $border-radius: 1.5rem;
 $border-width: 3px;
+
+$diag-pattern: repeating-linear-gradient(-45deg, var(--diag-color-1), var(--diag-color-1) 25%, var(--diag-color-2) 25%, var(--diag-color-2) 50%);
+$diag-pattern-size: 1.5rem;
+$diag-pattern-animation: diagShift 0.5s infinite linear;
+
+// mixins
+// -----------------------------------
+
+@mixin diagPattern() {
+	background-image: $diag-pattern;
+	background-size: $diag-pattern-size $diag-pattern-size;
+	animation: $diag-pattern-animation;
+}

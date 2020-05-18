@@ -22,8 +22,8 @@ export default {
 	--button-border-color: var(--primary-color);
 	--button-background-color: var(--primary-color);
 	--button-color: var(--white);
-	--button-hover-color-1: var(--primary-color);
-	--button-hover-color-2: var(--primary-color-dark);
+	// --diag-color-1: var(--primary-color);
+	// --diag-color-2: var(--primary-color-dark);
 
 	position: relative;
 	padding: var(--spacer-sm) var(--spacer);
@@ -37,10 +37,8 @@ export default {
 	color: var(--button-color);
 	text-decoration: none;
 
-	&:hover:not(.active) {
-		background-image: repeating-linear-gradient(-45deg, var(--button-hover-color-1), var(--button-hover-color-1) 25%, var(--button-hover-color-2) 25%, var(--button-hover-color-2) 50%);
-		background-size: 1.5rem 1.5rem;
-		animation: diagShift 0.5s infinite linear;
+	&:hover {
+		@include diagPattern;
 	}
 
 	&.active {
@@ -48,8 +46,4 @@ export default {
 	}
 }
 
-@keyframes diagShift {
-	0% { background-position: 0; }
-	100% { background-position: 1.5rem }
-}
 </style>

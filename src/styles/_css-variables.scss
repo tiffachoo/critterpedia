@@ -10,4 +10,7 @@
 	--spacer-sm: #{$spacer-sm};
 	--spacer: #{$spacer};
 	--spacer-lg: #{$spacer-lg};
+
+	--diag-color-1: var(--primary-color);
+	--diag-color-2: var(--primary-color-dark);
 }
