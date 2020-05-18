@@ -5,6 +5,10 @@
 				:style="{ backgroundImage: `url('${image}')`, backgroundPosition }"
 				class="critter-image" 
 			/>
+			<div 
+				v-if="badge"
+				class="critter-badge" 
+			/>
 		</div>
 		<span class="critter-text">
 			{{ name }}
@@ -16,6 +20,7 @@
 export default {
 	name: 'CpCritter',
 	props: {
+		badge: Boolean,
 		id: Number,
 		image: String,
 		name: String
@@ -39,6 +44,16 @@ export default {
 	padding: var(--spacer);
 	background-color: var(--primary-color-tint);
 	text-align: center;
+
+	&-badge {
+		position: absolute;
+		top: 0.625rem;
+		right: 0.625rem;
+		height: 0.875rem;
+		width: 0.875rem;
+		border-radius: 100%;
+		background-color: aqua;
+	}
 
 	&-image {
 		display: inline-block;

@@ -23,6 +23,7 @@
 				v-for="critter in displayedCritters"
 				:id="critter.id"
 				:key="critter.id"
+				:badge="checkCritterIsNew(critter['months'][selectedHemis])"
 				:image="critterImage"
 				:name="critter.name"
 			/>
@@ -114,6 +115,9 @@ export default {
 		this.selectedMonth = new Date().getMonth() + 1;
 	},
 	methods: {
+		checkCritterIsNew(months) {
+			return !(months.includes(this.selectedMonth - 1));
+		}
 	}
 }
 </script>
