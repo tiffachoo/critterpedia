@@ -12,6 +12,12 @@
 					:options="months"	
 					aria-label="Select a month"
 				/>
+				<cp-selector 
+					id="selectLocation"
+					v-model="selectedLocation"
+					:options="locationList"	
+					aria-label="Select a location"
+				/>
 			</div>
 		</header>
 		<transition-group
@@ -107,8 +113,30 @@ export default {
 	computed: {
 		displayedCritters() {
 			return this.critters.filter(critter => {
-				return critter['months'][this.selectedHemis].includes(this.selectedMonth);
+				return critter['months'][this.selectedHemis].includes(this.selectedMonth) &&
+					(!this.selectedLocation || critter['location'].toLowerCase() === this.selectedLocation);
 			});
+		},
+		locationList() {
+			return this.critters.reduce((acc, critter) => {
+				if (!(acc.some(location => location.text === critter.location))) {
+					return [
+						...acc,
+						{
+							value: critter.location.toLowerCase(),
+							text: critter.location
+						}
+					];
+				} else {
+					return acc;
+				}
+			}, 
+			[
+				{
+				value: '',
+				text: 'All'
+				}
+			]);
 		}
 	},
 	beforeMount() {
