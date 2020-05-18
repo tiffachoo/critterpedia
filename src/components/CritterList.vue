@@ -116,7 +116,8 @@ export default {
 	},
 	methods: {
 		checkCritterIsNew(months) {
-			return !(months.includes(this.selectedMonth - 1));
+			const lastMonth = this.selectedMonth === 1 ? 12 : this.selectedMonth - 1;
+			return !(months.includes(lastMonth));
 		}
 	}
 }
