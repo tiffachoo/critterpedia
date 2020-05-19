@@ -42,7 +42,7 @@ export default {
 	}
 
 	&.active {
-		--button-background-color: var(--primary-color-dark);
+		--button-background-color: var(--primary-color-darkest);
 	}
 }
 
