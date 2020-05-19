@@ -18,10 +18,20 @@
 					:options="locationList"	
 					aria-label="Select a location"
 				/>
-				<input 
-					v-model="isNow"
-					type="checkbox" 
-				/>
+				<div>
+					<input 
+						v-model="isNow"
+						type="checkbox" 
+					/>
+					<input 
+						v-model="isNewMonth"
+						type="checkbox" 
+					/>
+					<input 
+						v-model="isLastMonth"
+						type="checkbox" 
+					/>
+				</div>
 			</div>
 		</header>
 		<transition-group
@@ -58,6 +68,8 @@ export default {
 		return {
 			critterImage,
 			critters: data,
+			isLastMonth: false,
+			isNewMonth: false,
 			isNow: false,
 			selectedHemis: 'north',
 			selectedLayout: 'grid',
@@ -131,7 +143,9 @@ export default {
 				
 				return critter['months'][this.selectedHemis].includes(this.selectedMonth) &&
 					(!this.selectedLocation || critter['location'].toLowerCase() === this.selectedLocation) &&
-					(!this.isNow || isAvailNow);
+					(!this.isNow || isAvailNow) &&
+					(!this.isNewMonth || this.checkCritterIsNew(critter['months'][this.selectedHemis])) &&
+					(!this.isLastMonth || this.checkCritterIsLastMonth(critter['months'][this.selectedHemis]));
 			});
 		},
 		locationList() {
@@ -156,6 +170,18 @@ export default {
 			]);
 		}
 	},
+	watch: {
+		isNewMonth() {
+			if (this.isNewMonth) {
+				this.isLastMonth = false;
+			}
+		},
+		isLastMonth() {
+			if (this.isLastMonth) {
+				this.isNewMonth = false;
+			}
+		}
+	},
 	beforeMount() {
 		this.selectedMonth = new Date().getMonth() + 1;
 	},
@@ -163,6 +189,10 @@ export default {
 		checkCritterIsNew(months) {
 			const lastMonth = this.selectedMonth === 1 ? 12 : this.selectedMonth - 1;
 			return !(months.includes(lastMonth));
+		},
+		checkCritterIsLastMonth(months) {
+			const nextMonth = this.selectedMonth === 12 ? 1 : this.selectedMonth + 1;
+			return !(months.includes(nextMonth));
 		}
 	}
 }
