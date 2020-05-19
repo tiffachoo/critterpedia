@@ -49,8 +49,8 @@ export default {
 		position: absolute;
 		top: 0.625rem;
 		right: 0.625rem;
-		height: 0.875rem;
-		width: 0.875rem;
+		height: $badge-size;
+		width: $badge-size;
 		border-radius: 100%;
 		background-color: aqua;
 	}
@@ -60,7 +60,7 @@ export default {
 		height: 100%;
 		width: 100%;
 		background-size: 1000%;
-		transition: transform 0.2s ease-in-out;
+		transition: $scale-transition;
 
 		&-wrap {
 			position: relative;
@@ -80,7 +80,7 @@ export default {
 				width: 80%;
 				border-radius: 100%;
 				background-color: var(--primary-color);
-				transition: transform 0.3s ease-in-out;
+				transition: $scale-transition-lg;
 			}
 		}
 	}
@@ -91,12 +91,12 @@ export default {
 
 	&:hover {
 		.critter-image {
-			transform: scale(1.1);
+			transform: scale(#{$scale-size});
 
 			&-wrap::before {
 				@include diagPattern;
 
-				transform: scale(1.2);
+				transform: scale(#{$scale-size-lg});
 			}
 		}
 	}
