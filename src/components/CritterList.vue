@@ -18,6 +18,10 @@
 					:options="locationList"	
 					aria-label="Select a location"
 				/>
+				<input 
+					v-model="isNow"
+					type="checkbox" 
+				/>
 			</div>
 		</header>
 		<transition-group
@@ -54,9 +58,10 @@ export default {
 		return {
 			critterImage,
 			critters: data,
+			isNow: false,
 			selectedHemis: 'north',
-			selectedLocation: '',
 			selectedLayout: 'grid',
+			selectedLocation: '',
 			selectedMonth: 1,
 			months: [
 				{
@@ -112,9 +117,21 @@ export default {
 	},
 	computed: {
 		displayedCritters() {
+			const currentTime = new Date().getHours();
+			
 			return this.critters.filter(critter => {
+				let isAvailNow = false;
+				if (this.isNow) {
+					const startTime = critter['time']['start'];
+					const endTime = critter['time']['end'];
+					isAvailNow = this.isNow &&
+						((startTime < endTime && startTime <= currentTime && endTime >= currentTime) ||
+						(startTime > endTime && (startTime <= currentTime || endTime >= currentTime)));
+				}
+				
 				return critter['months'][this.selectedHemis].includes(this.selectedMonth) &&
-					(!this.selectedLocation || critter['location'].toLowerCase() === this.selectedLocation);
+					(!this.selectedLocation || critter['location'].toLowerCase() === this.selectedLocation) &&
+					(!this.isNow || isAvailNow);
 			});
 		},
 		locationList() {
