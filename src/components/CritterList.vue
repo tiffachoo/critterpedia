@@ -43,7 +43,7 @@
 				v-for="critter in displayedCritters"
 				:id="critter.id"
 				:key="critter.id"
-				:badge="checkCritterIsNew(critter['months'][selectedHemis])"
+				:badge="checkCritterIsNewMonth(critter['months'][selectedHemis])"
 				:image="critterImage"
 				:name="critter.name"
 			/>
@@ -144,7 +144,7 @@ export default {
 				return critter['months'][this.selectedHemis].includes(this.selectedMonth) &&
 					(!this.selectedLocation || critter['location'].toLowerCase() === this.selectedLocation) &&
 					(!this.isNow || isAvailNow) &&
-					(!this.isNewMonth || this.checkCritterIsNew(critter['months'][this.selectedHemis])) &&
+					(!this.isNewMonth || this.checkCritterIsNewMonth(critter['months'][this.selectedHemis])) &&
 					(!this.isLastMonth || this.checkCritterIsLastMonth(critter['months'][this.selectedHemis]));
 			});
 		},
@@ -186,7 +186,7 @@ export default {
 		this.selectedMonth = new Date().getMonth() + 1;
 	},
 	methods: {
-		checkCritterIsNew(months) {
+		checkCritterIsNewMonth(months) {
 			const lastMonth = this.selectedMonth === 1 ? 12 : this.selectedMonth - 1;
 			return !(months.includes(lastMonth));
 		},
