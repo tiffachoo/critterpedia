@@ -18,19 +18,28 @@
 					:options="locationList"	
 					aria-label="Select a location"
 				/>
-				<div>
-					<input 
+				<div class="checkbox-group">
+					<cp-checkbox 
+						id="checkboxNow"
 						v-model="isNow"
-						type="checkbox" 
-					/>
-					<input 
+						circle
+					>
+						🕐
+					</cp-checkbox>
+					<cp-checkbox 
+						id="checkboxNewMonth"
 						v-model="isNewMonth"
-						type="checkbox" 
-					/>
-					<input 
+						circle
+					>
+						🆕
+					</cp-checkbox>
+					<cp-checkbox 
+						id="checkboxLastMonth"
 						v-model="isLastMonth"
-						type="checkbox" 
-					/>
+						circle
+					>
+						👋
+					</cp-checkbox>
 				</div>
 			</div>
 		</header>
@@ -54,6 +63,7 @@
 
 <script>
 import critterImage from '../assets/acnh-fish-sprites.png';
+import CpCheckbox from './Checkbox.vue';
 import CpCritter from './Critter.vue';
 import CpSelector from './Selector.vue';
 import { data } from '../data/fish.json';
@@ -61,6 +71,7 @@ import { data } from '../data/fish.json';
 export default {
 	name: 'CpCritterList',
 	components: {
+		CpCheckbox,
 		CpCritter,
 		CpSelector
 	},

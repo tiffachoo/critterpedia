@@ -21,6 +21,13 @@ $spacer-lg: 2rem;
 $border-radius: 1.5rem;
 $border-width: 3px;
 
+$badge-size: 0.875rem;
+
+$scale-size: 1.1;
+$scale-size-lg: 1.2;
+$scale-transition: transform 0.2s ease-in-out;
+$scale-transition-lg: transform 0.3s ease-in-out;
+
 $diag-pattern: repeating-linear-gradient(-45deg, var(--diag-color-1), var(--diag-color-1) 25%, var(--diag-color-2) 25%, var(--diag-color-2) 50%);
 $diag-pattern-size: 1.5rem;
 $diag-pattern-animation: diagShift 0.5s infinite linear;
