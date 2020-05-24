@@ -12,6 +12,12 @@
 			:for="id"
 			class="checkbox-label"
 		>
+			<span 
+				v-if="labelTooltipText"
+				class="checkbox-label-tooltip"
+			>
+				{{ labelTooltipText }}
+			</span>
 			<slot />
 		</label>
 	</div>
@@ -25,9 +31,10 @@ export default {
 		event: 'change'
 	},
 	props: {
+		checked: Boolean,
 		circle: Boolean,
 		id: String,
-		checked: Boolean
+		labelTooltipText: String
 	}
 }
 </script>
@@ -45,7 +52,7 @@ export default {
 		position: relative;
 		display: block;
 		border-radius: $border-radius;
-		border: $border-width solid var(--white);
+		border: $border-width solid var(--checkbox-border-color, var(--white));
 		background-color: var(--white);
 		color: var(--checkbox-color);
 		cursor: pointer;
@@ -65,8 +72,23 @@ export default {
 			font-size: 0.5em;
 			line-height: 1;
 			color: var(--white);
-			transform: scale(0);
+			transform: var(--checkbox-icon-scale, scale(0));
 			transition: $scale-transition-lg;
+		}
+
+		&-tooltip {
+			position: absolute;
+			bottom: calc(100% + 0.5rem);
+			left: 50%;
+			transform: var(--checkbox-tooltip-transform, translate(-50%, 0.25rem));
+			padding: 0.25rem var(--spacer-sm);
+			border-radius: $border-radius;
+			background-color: var(--primary-color-darkest);
+			font-size: 0.75rem;
+			color: var(--white);
+			white-space: nowrap;
+			opacity: var(--checkbox-tooltip-opacity, 0);
+			transition: opacity 0.15s, transform 0.3s ease-in-out;
 		}
 		
 		&-circle {
@@ -86,22 +108,26 @@ export default {
 
 		&:checked {
 			+ .checkbox-label {
-				border-color: var(--checkbox-checked-color);
-
-				&::after {
-					transform: scale(1);
-				}
+				--checkbox-border-color: var(--checkbox-checked-color);
+				--checkbox-icon-scale: scale(1);
 			}
 		}
 	}
 
 	&:hover {
+		--checkbox-tooltip-transform: translateX(-50%);
+		--checkbox-tooltip-opacity: 1;
+
 		z-index: 2;
 		transform: scale(#{$scale-size});
 	}
 
 	&-group {
-		display: flex;
+		display: inline-flex;
+		
+		.checkbox + .checkbox {
+			margin-left: var(--spacer-sm);
+		}
 	}
 }
 </style>

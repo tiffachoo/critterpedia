@@ -23,6 +23,7 @@
 						id="checkboxNow"
 						v-model="isNow"
 						circle
+						label-tooltip-text="Catchable now"
 					>
 						🕐
 					</cp-checkbox>
@@ -30,6 +31,7 @@
 						id="checkboxNewMonth"
 						v-model="isNewMonth"
 						circle
+						label-tooltip-text="New this month"
 					>
 						🆕
 					</cp-checkbox>
@@ -37,6 +39,7 @@
 						id="checkboxLastMonth"
 						v-model="isLastMonth"
 						circle
+						label-tooltip-text="Leaving next month"
 					>
 						👋
 					</cp-checkbox>
