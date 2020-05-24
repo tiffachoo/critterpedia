@@ -1,9 +1,16 @@
 <template>
 	<section class="critter-list">
-		<header>
+		<header class="critter-list-header">
+			<!-- <div class="critter-list-header-title"> -->
 			<h2 class="heading-boxed">
 				{{ $route.params.type }}
 			</h2>
+				<!-- <fieldset class="radio-group">
+					<legend class="sr-only">
+						Select a layout
+					</legend>
+				</fieldset> -->
+			<!-- </div> -->
 			<!-- filters: table / grid view, north / south, location, month, time(?) -->
 			<div class="critter-list-filter">
 				<cp-selector 
