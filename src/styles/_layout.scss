@@ -1,3 +1,6 @@
+// app layout
+// -----------------------------------
+
 .container {
 	display: flex;
 	flex-wrap: wrap;
@@ -15,6 +18,8 @@
 		'header nav'
 		'main main';
 	grid-template-columns: 2fr 1fr;
+	margin-top: var(--spacer-lg);
+	margin-bottom: var(--spacer-lg);
 }
 
 .header {
@@ -23,8 +28,43 @@
 
 .nav {
 	grid-area: nav;
+	display: flex;
 	align-self: center;
 	justify-self: end;
+	
+	&-link {
+		height: 4.5rem;
+		width: 4.5rem;
+
+		+ .nav-link {
+			margin-left: -0.75rem;
+		}
+
+		&-icon {
+			width: 80%;	
+		}
+	}
+}
+
+.butter-deets-fill,
+.fish-scales-fill {
+	fill: var(--black);
+}
+
+.fish-fin-fill {
+	fill: var(--secondary-color);
+}
+
+.butter-wing-fill {
+	fill: var(--white);
+}
+
+.butter-antenna-stroke {
+	fill: none;
+	stroke: var(--black);
+	stroke-width: 3;
+	stroke-linecap: round;
+	stroke-miterlimit: 10;
 }
 
 .main {
@@ -36,6 +76,9 @@
 .main {
 	flex: 0 0 100%; 
 }
+
+// utils
+// -----------------------------------
 
 // .svg-hidden {
 // 	position: absolute;
