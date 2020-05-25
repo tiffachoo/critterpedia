@@ -2,6 +2,7 @@
 	<component 
 		:is="$attrs.href ? 'a' : $attrs.to ? 'router-link' : 'button'"
 		v-bind="$attrs"
+		:class="{ 'button-circle': circle }"
 		class="button"
 	>
 		<slot />
@@ -12,7 +13,7 @@
 export default {
 	name: 'CpButton',
 	props: {
-
+		circle: Boolean
 	}
 }
 </script>
@@ -26,6 +27,7 @@ export default {
 	// --diag-color-2: var(--primary-color-dark);
 
 	position: relative;
+	display: inline-block;
 	padding: var(--spacer-sm) var(--spacer);
 	border-radius: $border-radius;
 	border: $border-width solid var(--button-border-color);
@@ -37,12 +39,23 @@ export default {
 	color: var(--button-color);
 	text-decoration: none;
 
+	&-circle {
+		display: inline-grid;
+		place-items: center;
+		padding: 0;
+		border-radius: 100%;
+	}
+
 	&:hover {
-		@include diagPattern;
+		&:not(.active) {
+			@include diagPattern;
+		}
 	}
 
 	&.active {
 		--button-background-color: var(--primary-color-darkest);
+
+		z-index: 5;
 	}
 }
 
