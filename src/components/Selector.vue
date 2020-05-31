@@ -51,6 +51,7 @@ export default {
 		margin: $border-width var(--spacer) $border-width 0;
 		color: var(--primary-color);
 		transition: 0.3s ease-in-out;
+		pointer-events: none;
 
 		&-path {
 			fill: currentColor;
