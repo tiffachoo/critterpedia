@@ -2,7 +2,7 @@
 	<component 
 		:is="$attrs.href ? 'a' : $attrs.to ? 'router-link' : 'button'"
 		v-bind="$attrs"
-		:class="{ 'button-circle': circle }"
+		:class="[`button-${color}`, { 'button-circle': circle }]"
 		class="button"
 	>
 		<svg class="button-sparks button-sparks-left">
@@ -23,7 +23,11 @@
 export default {
 	name: 'CpButton',
 	props: {
-		circle: Boolean
+		circle: Boolean,
+		color: {
+			type: String,
+			default: 'primary'
+		}
 	}
 }
 </script>
@@ -33,8 +37,7 @@ export default {
 	--button-border-color: var(--primary-color);
 	--button-background-color: var(--primary-color);
 	--button-color: var(--white);
-	// --diag-color-1: var(--primary-color);
-	// --diag-color-2: var(--primary-color-dark);
+	--button-active-background-color: var(--primary-color-darkest);
 	--button-sparks-line-offset: 5px;
 
 	position: relative;
@@ -97,6 +100,14 @@ export default {
 		border-radius: 100%;
 	}
 
+	&-secondary {
+		--button-border-color: var(--secondary-color);
+		--button-background-color: var(--secondary-color);
+		--button-active-background-color: var(--secondary-color-darkest);
+		--diag-color-1: var(--secondary-color);
+		--diag-color-2: var(--secondary-color-dark);
+	}
+
 	&:hover {
 		&:not(.active) {
 			@include diagPattern;
@@ -118,7 +129,7 @@ export default {
 	}
 
 	&.active {
-		--button-background-color: var(--primary-color-darkest);
+		--button-background-color: var(--button-active-background-color);
 
 		z-index: 5;
 		cursor: default;

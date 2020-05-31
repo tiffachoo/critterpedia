@@ -11,6 +11,7 @@
 					circle
 					aria-label="Bugs"
 					class="nav-link"
+					color="secondary"
 					to="/bugs"
 				>
 					<svg 
@@ -39,6 +40,7 @@
 					circle
 					aria-label="Fish"
 					class="nav-link"
+					color="secondary"
 					to="/fish"
 				>
 					<svg 

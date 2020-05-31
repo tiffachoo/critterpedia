@@ -35,7 +35,7 @@
 	.button {
 		--button-sparks-line-offset: 10px;
 	}
-	
+
 	&-link {
 		height: 4.5rem;
 		width: 4.5rem;
@@ -55,11 +55,8 @@
 	fill: var(--black);
 }
 
+.butter-wing-fill,
 .fish-fin-fill {
-	fill: var(--secondary-color);
-}
-
-.butter-wing-fill {
 	fill: var(--white);
 }
 
