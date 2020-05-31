@@ -9,10 +9,10 @@
 			<nav class="nav">
 				<cp-button
 					circle
-					aria-label="Bugs"
 					class="nav-link"
 					color="secondary"
 					to="/bugs"
+					tooltip-text="Bugs"
 				>
 					<svg 
 						id="butterfly"
@@ -38,10 +38,10 @@
 				</cp-button>
 				<cp-button
 					circle
-					aria-label="Fish"
 					class="nav-link"
 					color="secondary"
 					to="/fish"
+					tooltip-text="Fish"
 				>
 					<svg 
 						id="fishy" 

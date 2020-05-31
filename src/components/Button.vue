@@ -5,6 +5,11 @@
 		:class="[`button-${color}`, { 'button-circle': circle }]"
 		class="button"
 	>
+		<slot />
+		<span
+			v-if="tooltipText"
+			class="button-tooltip"
+		>{{ tooltipText }}</span>
 		<svg class="button-sparks button-sparks-left">
 			<line class="button-sparks-line button-sparks-line-top" x1="5" y1="1.5" x2="15" y2="1.5" />
 			<line class="button-sparks-line button-sparks-line-middle" x1="5" y1="50%" x2="15" y2="50%" />
@@ -15,7 +20,6 @@
 			<line class="button-sparks-line button-sparks-line-middle" x1="5" y1="50%" x2="15" y2="50%" />
 			<line class="button-sparks-line button-sparks-line-bottom" x1="5" y1="100%" x2="15" y2="100%" />
 		</svg>
-		<slot />
 	</component>
 </template>
 
@@ -27,7 +31,8 @@ export default {
 		color: {
 			type: String,
 			default: 'primary'
-		}
+		},
+		tooltipText: String
 	}
 }
 </script>
@@ -37,6 +42,7 @@ export default {
 	--button-border-color: var(--primary-color);
 	--button-background-color: var(--primary-color);
 	--button-color: var(--white);
+	--button-tooltip-background-color: var(--primary-color-darkest);
 	--button-active-background-color: var(--primary-color-darkest);
 	--button-sparks-line-offset: 5px;
 
@@ -55,6 +61,33 @@ export default {
 	text-decoration: none;
 	transition: $scale-transition;
 	cursor: pointer;
+
+	&-tooltip {
+		position: absolute;
+		bottom: calc(100% - 0.25rem);
+		left: 50%;
+		transform: translateX(-50%);
+		padding: var(--spacer-sm) var(--spacer);
+		border-radius: $border-radius;
+		background-color: var(--button-tooltip-background-color);
+		font-size: 1em;
+		color: var(--white);
+		white-space: nowrap;
+		opacity: var(--button-tooltip-opacity, 0);
+		transition: opacity 0.15s, transform 0.3s ease-in-out;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: calc(50% - 5px);
+			width: 0; 
+			height: 0; 
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 5px solid var(--button-tooltip-background-color);
+		}
+	}
 
 	&-sparks {
 		position: absolute;
@@ -103,12 +136,15 @@ export default {
 	&-secondary {
 		--button-border-color: var(--secondary-color);
 		--button-background-color: var(--secondary-color);
+		--button-tooltip-background-color: var(--secondary-color-darkest);
 		--button-active-background-color: var(--secondary-color-darkest);
 		--diag-color-1: var(--secondary-color);
 		--diag-color-2: var(--secondary-color-dark);
 	}
 
 	&:hover {
+		--button-tooltip-opacity: 1;
+
 		&:not(.active) {
 			@include diagPattern;
 		}
