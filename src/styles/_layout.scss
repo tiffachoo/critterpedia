@@ -31,6 +31,10 @@
 	display: flex;
 	align-self: center;
 	justify-self: end;
+
+	.button {
+		--button-sparks-line-offset: 10px;
+	}
 	
 	&-link {
 		height: 4.5rem;
