@@ -1,17 +1,9 @@
 <template>
 	<section class="critter-list">
 		<header class="critter-list-header">
-			<!-- <div class="critter-list-header-title"> -->
 			<h2 class="heading-boxed">
 				{{ $route.params.type }}
 			</h2>
-				<!-- <fieldset class="radio-group">
-					<legend class="sr-only">
-						Select a layout
-					</legend>
-				</fieldset> -->
-			<!-- </div> -->
-			<!-- filters: table / grid view, north / south, location, month, time(?) -->
 			<div class="critter-list-filter">
 				<cp-selector 
 					id="selectMonth"
@@ -53,7 +45,27 @@
 				</div>
 			</div>
 		</header>
+		<fieldset class="radio-group">
+			<legend class="sr-only">
+				Select a layout
+			</legend>
+			<input 
+				id="layoutGrid"
+				v-model="selectedLayout"
+				name="layout" 
+				type="radio" 
+				value="grid"
+			>
+			<input 
+				id="layoutTable"
+				v-model="selectedLayout"
+				name="layout" 
+				type="radio" 
+				value="table"
+			>
+		</fieldset>
 		<transition-group
+			v-if="selectedLayout === 'grid'"
 			class="critter-list-content"
 			name="critter-transition"
 			tag="ul"
@@ -67,7 +79,10 @@
 				:name="critter.name"
 			/>
 		</transition-group>
-		<!-- <table></table> -->
+		<cp-critter-table 
+			v-else
+			:data="displayedCritters" 
+		/>
 	</section>
 </template>
 
@@ -75,6 +90,7 @@
 import critterImage from '../assets/acnh-fish-sprites.png';
 import CpCheckbox from './Checkbox.vue';
 import CpCritter from './Critter.vue';
+import CpCritterTable from './CritterTable.vue';
 import CpSelector from './Selector.vue';
 import { data } from '../data/fish.json';
 
@@ -83,6 +99,7 @@ export default {
 	components: {
 		CpCheckbox,
 		CpCritter,
+		CpCritterTable,
 		CpSelector
 	},
 	data() {
