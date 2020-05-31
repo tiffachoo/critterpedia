@@ -25,7 +25,7 @@
 						{{ critter.price }}
 					</td>
 					<td>
-						{{ critter.time.start }}:00 to {{ critter.time.end }}:00
+						{{ displayTimes(critter.time.start, critter.time.end) }}
 					</td>
 					<td>
 						{{ critter['months'][selectedHemis] }}
@@ -49,7 +49,15 @@ export default {
 	},
 	computed: {
 	},
-	methods: {}
+	methods: {
+		displayTimes(start, end) { 
+			if (start === 0 && end === 24) {
+				return 'All day';
+			} else {
+				return `${start}:00 to ${end}:00`;
+			}
+		}
+	}
 }
 </script>
 
