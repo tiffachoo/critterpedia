@@ -19,16 +19,17 @@
 						{{ critter.name }}
 					</td>
 					<td>
-						{{ critter.location }}
+						{{ critter.location }} 
+						<span v-if="critter.locationDetail">({{ critter.locationDetail }})</span>
 					</td>
 					<td>
-						{{ critter.price }}
+						{{ formatNumber(critter.price) }}
 					</td>
 					<td>
 						{{ displayTimes(critter.time.start, critter.time.end) }}
 					</td>
 					<td>
-						{{ critter['months'][selectedHemis] }}
+						{{ displayMonths(critter['months'][selectedHemis]) }}
 					</td>
 				</tr>
 			</tbody>
@@ -44,7 +45,7 @@ export default {
 	},
 	data() {
 		return {
-			selectedHemis: 'south' // temporary
+			selectedHemis: 'north' // temporary
 		}
 	},
 	computed: {
@@ -56,6 +57,17 @@ export default {
 			} else {
 				return `${start}:00 to ${end}:00`;
 			}
+		},
+		displayMonths(months) {
+			const monthsMap = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+			if (months.length === 12) {
+				return 'All months';
+			} else {
+				return months.map(month => monthsMap[month - 1]).join(', ');
+			}
+		},
+		formatNumber(number) {
+			return new Intl.NumberFormat('en-CA').format(number);
 		}
 	}
 }
