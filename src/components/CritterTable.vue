@@ -3,16 +3,49 @@
 		<table class="critter-table">
 			<thead>
 				<tr>
-					<th>Name</th>
-					<th>Location</th>
-					<th>Price</th>
+					<th 
+						:aria-sort="sortKey === 'name' ? `${sortDirection}ending` : null"
+						class="critter-table-th-sort"
+					>
+						<button 
+							:class="{ [sortDirection]: sortKey === 'name' }"
+							class="critter-table-th-sort-button"
+							@click="sortColumn('name')"
+						>
+							Name
+						</button>
+					</th>
+					<th
+						:aria-sort="sortKey === 'location' ? `${sortDirection}ending` : null"
+						class="critter-table-th-sort"
+					>
+						<button 
+							:class="{ [sortDirection]: sortKey === 'location' }"
+							class="critter-table-th-sort-button"
+							@click="sortColumn('location')"
+						>
+							Location
+						</button>
+					</th>
+					<th
+						:aria-sort="sortKey === 'price' ? `${sortDirection}ending` : null"
+						class="critter-table-th-sort"
+					>
+						<button 
+							:class="{ [sortDirection]: sortKey === 'price' }"
+							class="critter-table-th-sort-button"
+							@click="sortColumn('price')"
+						>
+							Price
+						</button>
+					</th>
 					<th>Time</th>
 					<th>Months</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr 
-					v-for="critter in data"
+					v-for="critter in sortedData"
 					:key="critter.id"
 				>
 					<td>
@@ -45,10 +78,25 @@ export default {
 	},
 	data() {
 		return {
+			sortKey: '',
+			sortDirection: '',
 			selectedHemis: 'north' // temporary
 		}
 	},
 	computed: {
+		sortedData() {
+			return [...this.data].sort((critterA, critterB) => {
+				if (critterA[this.sortKey] < critterB[this.sortKey]) {
+					return this.sortDirection === 'asc' ? -1 : 1;
+
+				} else if (critterA[this.sortKey] > critterB[this.sortKey]) {
+					return this.sortDirection === 'asc' ? 1 : -1;
+
+				} else {
+					return 0;
+				}
+			});
+		}
 	},
 	methods: {
 		displayTimes(start, end) { 
@@ -68,6 +116,10 @@ export default {
 		},
 		formatNumber(number) {
 			return new Intl.NumberFormat('en-CA').format(number);
+		},
+		sortColumn(key) {
+			this.sortDirection = (this.sortKey === key && this.sortDirection === 'asc') ? 'desc' : 'asc';
+			this.sortKey = key;
 		}
 	}
 }
@@ -77,15 +129,47 @@ export default {
 .critter-table {
 	width: 100%;
 
-	th,
-	td {
+	%th {
+		font-family: $primary-font-family;
+		font-size: 1rem;
+		color: var(--primary-color-darkest);
+		text-align: left;
+	}
+
+	th:not(.critter-table-th-sort),
+	td,
+	&-th-sort-button {
 		padding: var(--spacer-sm);
+	}
+
+	&-th-sort {
+		&-button {
+			@extend %th;
+
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			border: 0;
+			background-color: transparent;
+
+			&.asc {
+				&::after {
+					content: '👆';
+				}
+			}
+
+			&.desc {
+				&::after {
+					content: '👇';
+				}
+			}
+		}
 	}
 
 	> thead {
 		th {
-			color: var(--primary-color-darkest);
-			text-align: left;
+			@extend %th;
 		}
 	}
 
