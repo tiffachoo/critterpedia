@@ -1,6 +1,12 @@
 <template>
-	<li class="critter">
-		<div class="critter-image-wrap">
+	<component 
+		:is="tag"
+		class="critter"
+	>
+		<div 
+			:class="{ 'critter-image-hover': hoverPattern }"
+			class="critter-image-wrap"
+		>
 			<div 
 				:style="{ backgroundImage: `url('${image}')`, backgroundPosition }"
 				class="critter-image" 
@@ -10,10 +16,13 @@
 				class="critter-badge" 
 			/>
 		</div>
-		<span class="critter-text">
+		<span 
+			v-if="name"
+			class="critter-text"
+		>
 			{{ name }}
 		</span>
-	</li>
+	</component>
 </template>
 
 <script>
@@ -21,9 +30,17 @@ export default {
 	name: 'CpCritter',
 	props: {
 		badge: Boolean,
+		hoverPattern: {
+			type: Boolean,
+			default: true
+		},
 		id: Number,
 		image: String,
-		name: String
+		name: String,
+		tag: {
+			type: String,
+			default: 'li'
+		}
 	},
 	computed: {
 		backgroundPosition() {
@@ -37,12 +54,17 @@ export default {
 
 <style lang="scss">
 .critter {
+	--critter-size: 6rem;
+	--critter-background-color: var(--primary-color-tint);
+	--critter-circle-background-color: var(--primary-color);
+	--critter-font-size: 0.875rem;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	padding: var(--spacer);
-	background-color: var(--primary-color-tint);
+	background-color: var(--critter-background-color);
 	text-align: center;
 
 	&-badge {
@@ -52,7 +74,8 @@ export default {
 		height: $badge-size;
 		width: $badge-size;
 		border-radius: 100%;
-		background-color: aqua;
+		border: $border-width solid var(--white);
+		background-color: var(--secondary-color);
 	}
 
 	&-image {
@@ -65,8 +88,8 @@ export default {
 		&-wrap {
 			position: relative;
 			z-index: 1;
-			height: 6rem;
-			width: 6rem;
+			height: var(--critter-size);
+			width: var(--critter-size);
 			margin-bottom: var(--spacer-sm);
 
 			&::before {
@@ -79,14 +102,14 @@ export default {
 				height: 80%;
 				width: 80%;
 				border-radius: 100%;
-				background-color: var(--primary-color);
+				background-color: var(--critter-circle-background-color);
 				transition: $scale-transition-lg;
 			}
 		}
 	}
 
 	&-text {
-		font-size: 0.875rem;
+		font-size: var(--critter-font-size);
 	}
 
 	&:hover {
@@ -94,9 +117,11 @@ export default {
 			transform: scale(#{$scale-size});
 
 			&-wrap::before {
-				@include diagPattern;
-
 				transform: scale(#{$scale-size-lg});
+			}
+
+			&-hover::before {
+				@include diagPattern;
 			}
 		}
 	}

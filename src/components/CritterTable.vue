@@ -49,7 +49,14 @@
 					:key="critter.id"
 				>
 					<td>
-						{{ critter.name }}
+						<cp-critter
+							:id="critter.id"
+							:hover-pattern="false"
+							:image="critterImage"
+							:name="critter.name"
+							tag="div"
+						/>
+						<!-- {{ critter.name }} -->
 					</td>
 					<td>
 						{{ critter.location }} 
@@ -71,13 +78,19 @@
 </template>
 
 <script>
+import critterImage from '../assets/acnh-fish-sprites.png';
+import CpCritter from './Critter.vue';
 export default {
 	name: 'CpCritterTable',
+	components: {
+		CpCritter
+	},
 	props: {
 		data: Array
 	},
 	data() {
 		return {
+			critterImage, // temporary
 			sortKey: '',
 			sortDirection: '',
 			selectedHemis: 'north' // temporary
@@ -176,6 +189,7 @@ export default {
 	> tbody {
 		td {
 			font-size: 1.125rem;
+			vertical-align: middle;
 		}
 
 		tr {
@@ -187,6 +201,22 @@ export default {
 
 				color: var(--white);
 			}
+		}
+	}
+
+	.critter {
+		--critter-size: 3rem;
+		--critter-background-color: transparent;
+		--critter-circle-background-color: var(--primary-color-tint);
+		--critter-font-size: inherit;
+
+		flex-direction: row;
+		justify-content: start;
+		padding: 0;
+
+		&-image-wrap {
+			margin-bottom: 0;
+			margin-right: var(--spacer);
 		}
 	}
 }
