@@ -140,12 +140,14 @@ export default {
 
 <style lang="scss">
 .critter-table {
+	--th-color: var(--primary-color-darkest);
+
 	width: 100%;
 
 	%th {
 		font-family: $primary-font-family;
 		font-size: 1rem;
-		color: var(--primary-color-darkest);
+		color: var(--th-color);
 		text-align: left;
 	}
 
@@ -165,17 +167,33 @@ export default {
 			width: 100%;
 			border: 0;
 			background-color: transparent;
+			cursor: pointer;
 
-			&.asc {
-				&::after {
-					content: '👆';
-				}
+			&::after {
+				content: '';
+				height: 1ch;
+				width: 1ch;
+				background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="45.41" height="34.92" viewBox="0 0 45.41 34.92"><path d="M25.19,33.61l19.7-28.92C46.24,2.7,44.82,0,42.41,0H3.01C0.6,0-0.83,2.7,0.53,4.69l19.7,28.92 C21.42,35.36,23.99,35.36,25.19,33.61z" style="fill:%23d1bc41;"/></svg>');
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: center;
+				transform: var(--th-sort-rotate, rotateX(180deg));
+				transition: $scale-transition;
+				opacity: var(--th-sort-opacity, 0);
+			}
+
+			&:hover {
+				--th-color: var(--primary-color-dark);
+				--th-sort-opacity: 0.5;
+			}
+
+			&.asc,
+			&.desc {
+				--th-sort-opacity: 1;
 			}
 
 			&.desc {
-				&::after {
-					content: '👇';
-				}
+				--th-sort-rotate: rotateX(0deg);
 			}
 		}
 	}
@@ -194,7 +212,7 @@ export default {
 
 		tr {
 			border-bottom: 1px dashed var(--primary-color);
-			// border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><rect x="0.5" y="0.5" width="14" height="14" style="fill:none;stroke:#FF1D1D;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:3,4;"/></svg>') 10% stretch;
+			// border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><rect x="0.5" y="0.5" width="14" height="14" style="fill:none;stroke:%23d1bc41;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:3,4;"/></svg>') 10% stretch;
 
 			&:hover {
 				@include diagPattern;
