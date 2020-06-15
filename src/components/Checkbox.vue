@@ -7,25 +7,28 @@
 			type="checkbox"
 			@change="$emit('change', $event.target.checked)"
 		/>
-		<label 
+		<component 
+			:is="labelTooltipText ? 'cp-tooltip' : 'label'" 
 			:class="{ 'checkbox-label-circle': circle }"
 			:for="id"
+			:tag="labelTooltipText ? 'label' : null"
 			class="checkbox-label"
 		>
-			<span 
-				v-if="labelTooltipText"
-				class="checkbox-label-tooltip"
-			>
-				{{ labelTooltipText }}
-			</span>
-			<slot />
-		</label>
+			<template v-slot:anchor>
+				<slot />
+			</template>
+			{{ labelTooltipText }}
+		</component>
 	</div>
 </template>
 
 <script>
+import CpTooltip from './Tooltip.vue';
 export default {
 	name: 'CpCheckbox',
+	components: {
+		CpTooltip
+	},
 	model: {
 		prop: 'checked',
 		event: 'change'
@@ -75,21 +78,6 @@ export default {
 			transform: var(--checkbox-icon-scale, scale(0));
 			transition: $scale-transition-lg;
 		}
-
-		&-tooltip {
-			position: absolute;
-			bottom: calc(100% + 0.5rem);
-			left: 50%;
-			transform: var(--checkbox-tooltip-transform, translate(-50%, 0.25rem));
-			padding: 0.25rem var(--spacer-sm);
-			border-radius: $border-radius;
-			background-color: var(--primary-color-darkest);
-			font-size: 0.75rem;
-			color: var(--white);
-			white-space: nowrap;
-			opacity: var(--checkbox-tooltip-opacity, 0);
-			transition: opacity 0.15s, transform 0.3s ease-in-out;
-		}
 		
 		&-circle {
 			display: grid;
@@ -114,9 +102,6 @@ export default {
 	}
 
 	&:hover {
-		--checkbox-tooltip-transform: translateX(-50%);
-		--checkbox-tooltip-opacity: 1;
-
 		z-index: 2;
 		transform: scale(#{$scale-size});
 	}
