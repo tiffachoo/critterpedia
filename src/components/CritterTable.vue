@@ -52,7 +52,7 @@
 						<cp-critter
 							:id="critter.id"
 							:hover-pattern="false"
-							:image="critterImage"
+							:image="image"
 							:name="critter.name"
 							tag="div"
 						/>
@@ -78,7 +78,6 @@
 </template>
 
 <script>
-import critterImage from '../assets/acnh-fish-sprites.png';
 import CpCritter from './Critter.vue';
 export default {
 	name: 'CpCritterTable',
@@ -86,11 +85,11 @@ export default {
 		CpCritter
 	},
 	props: {
-		data: Array
+		data: Array,
+		image: String
 	},
 	data() {
 		return {
-			critterImage, // temporary
 			sortKey: '',
 			sortDirection: '',
 			selectedHemis: 'north' // temporary

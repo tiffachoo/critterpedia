@@ -82,6 +82,7 @@
 		<cp-critter-table 
 			v-else
 			:data="displayedCritters" 
+			:image="critterImage"
 		/>
 	</section>
 </template>
