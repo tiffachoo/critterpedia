@@ -26,48 +26,6 @@
 	grid-area: header;
 }
 
-.nav {
-	grid-area: nav;
-	display: flex;
-	align-self: center;
-	justify-self: end;
-
-	.button {
-		--button-sparks-line-offset: 10px;
-	}
-
-	&-link {
-		height: 4.5rem;
-		width: 4.5rem;
-
-		+ .nav-link {
-			margin-left: -0.75rem;
-		}
-
-		&-icon {
-			width: 80%;	
-		}
-	}
-}
-
-.butter-deets-fill,
-.fish-scales-fill {
-	fill: var(--black);
-}
-
-.butter-wing-fill,
-.fish-fin-fill {
-	fill: var(--white);
-}
-
-.butter-antenna-stroke {
-	fill: none;
-	stroke: var(--black);
-	stroke-width: 3;
-	stroke-linecap: round;
-	stroke-miterlimit: 10;
-}
-
 .main {
 	grid-area: main;
 }
