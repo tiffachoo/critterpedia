@@ -89,10 +89,10 @@
 
 <script>
 import critterImage from '../assets/acnh-fish-sprites.png';
-import CpCheckbox from './Checkbox.vue';
-import CpCritter from './Critter.vue';
-import CpCritterTable from './CritterTable.vue';
-import CpSelector from './Selector.vue';
+import CpCheckbox from '../components/Checkbox.vue';
+import CpCritter from '../components/Critter.vue';
+import CpCritterTable from '../components/CritterTable.vue';
+import CpSelector from '../components/Selector.vue';
 import { data } from '../data/fish.json';
 
 export default {

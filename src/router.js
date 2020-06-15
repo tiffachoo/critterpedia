@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import main from './components/CritterList.vue';
+import main from './pages/CritterList.vue';
 
 export default new Router({
 	routes: [
