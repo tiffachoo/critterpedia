@@ -67,6 +67,7 @@
 					</td>
 					<td>
 						{{ displayTimes(critter.time.start, critter.time.end) }}
+						<span v-if="critter.time.start2">and {{ displayTimes(critter.time.start2, critter.time.end2) }}</span>
 					</td>
 					<td>
 						{{ displayMonths(critter['months'][selectedHemis]) }}
@@ -230,6 +231,7 @@ export default {
 		flex-direction: row;
 		justify-content: start;
 		padding: 0;
+		text-align: left;
 
 		&-image-wrap {
 			margin-bottom: 0;
