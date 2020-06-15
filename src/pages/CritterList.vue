@@ -49,20 +49,47 @@
 			<legend class="sr-only">
 				Select a layout
 			</legend>
-			<input 
+			<cp-radio 
 				id="layoutGrid"
 				v-model="selectedLayout"
 				name="layout" 
 				type="radio" 
 				value="grid"
 			>
-			<input 
+				<svg 
+					class="radio-layout-icon radio-layout-grid-icon"
+					width="50px" 
+					height="50px" 
+					viewBox="0 0 50 50"
+				>
+					<path d="M19,23H9c-2.21,0-4-1.79-4-4V9c0-2.21,1.79-4,4-4h10c2.21,0,4,1.79,4,4v10C23,21.21,21.21,23,19,23z"/>
+					<path d="M41,23H31c-2.21,0-4-1.79-4-4V9c0-2.21,1.79-4,4-4h10c2.21,0,4,1.79,4,4v10C45,21.21,43.21,23,41,23z"/>
+					<path d="M19,45H9c-2.21,0-4-1.79-4-4V31c0-2.21,1.79-4,4-4h10c2.21,0,4,1.79,4,4v10C23,43.21,21.21,45,19,45z"/>
+					<path d="M41,45H31c-2.21,0-4-1.79-4-4V31c0-2.21,1.79-4,4-4h10c2.21,0,4,1.79,4,4v10C45,43.21,43.21,45,41,45z"/>
+				</svg>
+			</cp-radio>
+
+			<cp-radio 
 				id="layoutTable"
 				v-model="selectedLayout"
 				name="layout" 
 				type="radio" 
 				value="table"
 			>
+				<svg 
+					class="radio-layout-icon radio-layout-table-icon"
+					width="50px" 
+					height="50px" 
+					viewBox="0 0 50 50"
+				>
+					<path d="M11,16H9c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h2c2.21,0,4,1.79,4,4v2C15,14.21,13.21,16,11,16z"/>
+					<path d="M11,30H9c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h2c2.21,0,4,1.79,4,4v2C15,28.21,13.21,30,11,30z"/>
+					<path d="M11,44H9c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h2c2.21,0,4,1.79,4,4v2C15,42.21,13.21,44,11,44z"/>
+					<path d="M41,16H23c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h18c2.21,0,4,1.79,4,4v2C45,14.21,43.21,16,41,16z"/>
+					<path d="M41,30H23c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h18c2.21,0,4,1.79,4,4v2C45,28.21,43.21,30,41,30z"/>
+					<path d="M41,44H23c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h18c2.21,0,4,1.79,4,4v2C45,42.21,43.21,44,41,44z"/>
+				</svg>
+			</cp-radio>
 		</fieldset>
 		<transition-group
 			v-if="selectedLayout === 'grid'"
@@ -92,6 +119,7 @@ import critterImage from '../assets/acnh-fish-sprites.png';
 import CpCheckbox from '../components/Checkbox.vue';
 import CpCritter from '../components/Critter.vue';
 import CpCritterTable from '../components/CritterTable.vue';
+import CpRadio from '../components/Radio.vue';
 import CpSelector from '../components/Selector.vue';
 import { data } from '../data/fish.json';
 
@@ -101,6 +129,7 @@ export default {
 		CpCheckbox,
 		CpCritter,
 		CpCritterTable,
+		CpRadio,
 		CpSelector
 	},
 	data() {
