@@ -14,10 +14,10 @@
 			:tag="labelTooltipText ? 'label' : null"
 			class="checkbox-label"
 		>
-			<template v-slot:anchor>
-				<slot />
+			<slot />
+			<template #content>
+				{{ labelTooltipText }}
 			</template>
-			{{ labelTooltipText }}
 		</component>
 	</div>
 </template>

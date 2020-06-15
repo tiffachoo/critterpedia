@@ -3,9 +3,9 @@
 		:is="tag"
 		class="tooltip"
 	>
-		<slot name="anchor" />
+		<slot />
 		<div class="tooltip-content">
-			<slot />
+			<slot name="content"  />
 		</div>
 	</component>
 </template>
