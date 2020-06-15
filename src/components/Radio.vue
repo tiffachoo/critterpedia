@@ -9,24 +9,27 @@
 			type="radio"
 			@change="$emit('change', $event.target.value)"
 		/>
-		<label 
+		<component 
+			:is="labelTooltipText ? 'cp-tooltip' : 'label'" 
 			:for="id"
+			:tag="labelTooltipText ? 'label' : null"
 			class="radio-label"
 		>
-			<span 
-				v-if="labelTooltipText"
-				class="radio-label-tooltip"
-			>
-				{{ labelTooltipText }}
-			</span>
 			<slot />
-		</label>
+			<template #content>
+				{{ labelTooltipText }}
+			</template>
+		</component>
 	</div>
 </template>
 
 <script>
+import CpTooltip from './Tooltip.vue';
 export default {
 	name: 'CpRadio',
+	components: {
+		CpTooltip
+	},
 	model: {
 		prop: 'valueModel',
 		event: 'change'
@@ -80,7 +83,7 @@ export default {
 	}
 
 	&-group {
-		line-height: 0;
+		// line-height: 0;
 		text-align: right;
 
 		// .radio + .radio {

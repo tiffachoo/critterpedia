@@ -52,6 +52,7 @@
 			<cp-radio 
 				id="layoutGrid"
 				v-model="selectedLayout"
+				label-tooltip-text="Grid"
 				name="layout" 
 				type="radio" 
 				value="grid"
@@ -70,6 +71,7 @@
 			<cp-radio 
 				id="layoutTable"
 				v-model="selectedLayout"
+				label-tooltip-text="Table"
 				name="layout" 
 				type="radio" 
 				value="table"
