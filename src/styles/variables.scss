@@ -44,3 +44,11 @@ $diag-pattern-animation: diagShift 0.5s infinite linear;
 	background-size: $diag-pattern-size $diag-pattern-size;
 	animation: $diag-pattern-animation;
 }
+
+// extends
+// -----------------------------------
+
+%input-hider {
+	position: absolute;
+	opacity: 0;
+}

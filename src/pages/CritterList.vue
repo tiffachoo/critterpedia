@@ -45,7 +45,7 @@
 				</div>
 			</div>
 		</header>
-		<fieldset class="radio-group">
+		<fieldset class="critter-list-filter-layout radio-group">
 			<legend class="sr-only">
 				Select a layout
 			</legend>
@@ -58,14 +58,12 @@
 			>
 				<svg 
 					class="radio-layout-icon radio-layout-grid-icon"
-					width="50px" 
-					height="50px" 
 					viewBox="0 0 50 50"
 				>
-					<path d="M19,23H9c-2.21,0-4-1.79-4-4V9c0-2.21,1.79-4,4-4h10c2.21,0,4,1.79,4,4v10C23,21.21,21.21,23,19,23z"/>
-					<path d="M41,23H31c-2.21,0-4-1.79-4-4V9c0-2.21,1.79-4,4-4h10c2.21,0,4,1.79,4,4v10C45,21.21,43.21,23,41,23z"/>
-					<path d="M19,45H9c-2.21,0-4-1.79-4-4V31c0-2.21,1.79-4,4-4h10c2.21,0,4,1.79,4,4v10C23,43.21,21.21,45,19,45z"/>
-					<path d="M41,45H31c-2.21,0-4-1.79-4-4V31c0-2.21,1.79-4,4-4h10c2.21,0,4,1.79,4,4v10C45,43.21,43.21,45,41,45z"/>
+					<path class="radio-layout-path" d="M19,23H9c-2.21,0-4-1.79-4-4V9c0-2.21,1.79-4,4-4h10c2.21,0,4,1.79,4,4v10C23,21.21,21.21,23,19,23z"/>
+					<path class="radio-layout-path" d="M41,23H31c-2.21,0-4-1.79-4-4V9c0-2.21,1.79-4,4-4h10c2.21,0,4,1.79,4,4v10C45,21.21,43.21,23,41,23z"/>
+					<path class="radio-layout-path" d="M19,45H9c-2.21,0-4-1.79-4-4V31c0-2.21,1.79-4,4-4h10c2.21,0,4,1.79,4,4v10C23,43.21,21.21,45,19,45z"/>
+					<path class="radio-layout-path" d="M41,45H31c-2.21,0-4-1.79-4-4V31c0-2.21,1.79-4,4-4h10c2.21,0,4,1.79,4,4v10C45,43.21,43.21,45,41,45z"/>
 				</svg>
 			</cp-radio>
 
@@ -78,16 +76,14 @@
 			>
 				<svg 
 					class="radio-layout-icon radio-layout-table-icon"
-					width="50px" 
-					height="50px" 
 					viewBox="0 0 50 50"
 				>
-					<path d="M11,16H9c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h2c2.21,0,4,1.79,4,4v2C15,14.21,13.21,16,11,16z"/>
-					<path d="M11,30H9c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h2c2.21,0,4,1.79,4,4v2C15,28.21,13.21,30,11,30z"/>
-					<path d="M11,44H9c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h2c2.21,0,4,1.79,4,4v2C15,42.21,13.21,44,11,44z"/>
-					<path d="M41,16H23c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h18c2.21,0,4,1.79,4,4v2C45,14.21,43.21,16,41,16z"/>
-					<path d="M41,30H23c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h18c2.21,0,4,1.79,4,4v2C45,28.21,43.21,30,41,30z"/>
-					<path d="M41,44H23c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h18c2.21,0,4,1.79,4,4v2C45,42.21,43.21,44,41,44z"/>
+					<path class="radio-layout-path" d="M11,16H9c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h2c2.21,0,4,1.79,4,4v2C15,14.21,13.21,16,11,16z"/>
+					<path class="radio-layout-path" d="M11,30H9c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h2c2.21,0,4,1.79,4,4v2C15,28.21,13.21,30,11,30z"/>
+					<path class="radio-layout-path" d="M11,44H9c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h2c2.21,0,4,1.79,4,4v2C15,42.21,13.21,44,11,44z"/>
+					<path class="radio-layout-path" d="M41,16H23c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h18c2.21,0,4,1.79,4,4v2C45,14.21,43.21,16,41,16z"/>
+					<path class="radio-layout-path" d="M41,30H23c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h18c2.21,0,4,1.79,4,4v2C45,28.21,43.21,30,41,30z"/>
+					<path class="radio-layout-path" d="M41,44H23c-2.21,0-4-1.79-4-4v-2c0-2.21,1.79-4,4-4h18c2.21,0,4,1.79,4,4v2C45,42.21,43.21,44,41,44z"/>
 				</svg>
 			</cp-radio>
 		</fieldset>
@@ -273,6 +269,7 @@ export default {
 		display: grid;
 		grid-gap: var(--spacer);
 		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+		margin-top: var(--spacer);
 	}
 
 	&-filter {
@@ -280,9 +277,13 @@ export default {
 		grid-gap: var(--spacer);
 		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 		padding: var(--spacer-lg) var(--spacer);
-		margin-bottom: var(--spacer);
+		// margin-bottom: var(--spacer);
 		border-radius: $border-radius;
 		background-color: var(--grey-tint);
+	}
+
+	&-filter-layout {
+		margin-top: calc(-1 * var(--spacer));
 	}
 }
 
@@ -300,6 +301,17 @@ export default {
 	&-enter,
 	&-leave-to {
 		opacity: 0;
+	}
+}
+
+.radio-layout {
+	&-path {
+		fill: currentColor;
+	}
+
+	&-icon {
+		height: 2rem;
+		width: 2rem;
 	}
 }
 </style>

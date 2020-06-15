@@ -47,4 +47,45 @@ export default {
 </script>
 
 <style lang="scss">
+.radio {
+	--radio-background-color: var(--grey-tint);
+	--radio-color: var(--grey);
+	
+	position: relative;
+	display: inline-flex;
+
+	&-label {
+		display: block;
+		padding: var(--spacer-sm);
+		border-radius: $border-radius;
+		border: $border-width solid var(--white);
+		background-color: var(--radio-background-color);
+		color: var(--radio-color);
+		cursor: pointer;
+
+		svg {
+			display: block;
+		}
+	}
+	
+	&-control {
+		@extend %input-hider;
+
+		&:checked {
+			+ .radio-label {
+				--radio-color: var(--primary-color-dark);
+				--radio-background-color: var(--primary-color-tint);
+			}
+		}
+	}
+
+	&-group {
+		line-height: 0;
+		text-align: right;
+
+		// .radio + .radio {
+		// 	margin-left: var(--spacer-sm);
+		// }
+	}
+}
 </style>

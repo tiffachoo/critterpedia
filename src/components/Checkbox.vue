@@ -103,8 +103,7 @@ export default {
 	}
 
 	&-control {
-		position: absolute;
-		opacity: 0;
+		@extend %input-hider;
 
 		&:checked {
 			+ .checkbox-label {
