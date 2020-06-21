@@ -131,13 +131,11 @@
 </template>
 
 <script>
-import critterImage from '../assets/acnh-fish-sprites.png';
 import CpCheckbox from '../components/Checkbox.vue';
 import CpCritter from '../components/Critter.vue';
 import CpCritterTable from '../components/CritterTable.vue';
 import CpRadio from '../components/Radio.vue';
 import CpSelector from '../components/Selector.vue';
-import { data } from '../data/fish.json';
 
 export default {
 	name: 'CpCritterList',
@@ -150,8 +148,8 @@ export default {
 	},
 	data() {
 		return {
-			critterImage,
-			critters: data,
+			critterImage: null,
+			critters: null,
 			isLastMonth: false,
 			isNewMonth: false,
 			isNow: false,
@@ -215,7 +213,7 @@ export default {
 		displayedCritters() {
 			const currentTime = new Date().getHours();
 			
-			return this.critters.filter(critter => {
+			return this.critters ? this.critters.filter(critter => {
 				let isAvailNow = false;
 				if (this.isNow) {
 					const startTime = critter['time']['start'];
@@ -230,10 +228,10 @@ export default {
 					(!this.isNow || isAvailNow) &&
 					(!this.isNewMonth || this.checkCritterIsNewMonth(critter['months'][this.selectedHemis])) &&
 					(!this.isLastMonth || this.checkCritterIsLastMonth(critter['months'][this.selectedHemis]));
-			});
+			}) : [];
 		},
 		locationList() {
-			return this.critters.reduce((acc, critter) => {
+			return this.critters ? this.critters.reduce((acc, critter) => {
 				if (!(acc.some(location => location.text === critter.location))) {
 					return [
 						...acc,
@@ -248,10 +246,10 @@ export default {
 			}, 
 			[
 				{
-				value: '',
-				text: 'All'
+					value: '',
+					text: 'All'
 				}
-			]);
+			]) : [];
 		}
 	},
 	watch: {
@@ -264,10 +262,16 @@ export default {
 			if (this.isLastMonth) {
 				this.isNewMonth = false;
 			}
+		},
+		'$route'() {
+			this.getCritters();
 		}
 	},
 	beforeMount() {
 		this.selectedMonth = new Date().getMonth() + 1;
+	},
+	created() {
+		this.getCritters();
 	},
 	methods: {
 		checkCritterIsNewMonth(months) {
@@ -277,6 +281,15 @@ export default {
 		checkCritterIsLastMonth(months) {
 			const nextMonth = this.selectedMonth === 12 ? 1 : this.selectedMonth + 1;
 			return !(months.includes(nextMonth));
+		},
+		getCritters() {
+			Promise.all([
+				import(`../data/${this.$route.params.type}.json`),
+				import(`../assets/acnh-${this.$route.params.type}-sprites.png`)
+			]).then(([json, img]) => {
+				this.critters = json.default.data;
+				this.critterImage = img.default;
+			});
 		}
 	}
 }
