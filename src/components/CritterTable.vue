@@ -67,7 +67,9 @@
 					</td>
 					<td>
 						{{ displayTimes(critter.time.start, critter.time.end) }}
-						<span v-if="critter.time.start2">and {{ displayTimes(critter.time.start2, critter.time.end2) }}</span>
+						<template v-if="critter.time.start2">
+							<br>{{ displayTimes(critter.time.start2, critter.time.end2) }}
+						</template>
 					</td>
 					<td>
 						{{ displayMonths(critter['months'][selectedHemis]) }}
@@ -157,6 +159,11 @@ export default {
 		padding: var(--spacer-sm);
 	}
 
+	tr {
+		border-bottom: 1px dashed var(--primary-color);
+		// border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><rect x="0.5" y="0.5" width="14" height="14" style="fill:none;stroke:%23d1bc41;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:3,4;"/></svg>') 10% stretch;
+	}
+
 	&-th-sort {
 		&-button {
 			@extend %th;
@@ -211,14 +218,20 @@ export default {
 		}
 
 		tr {
-			border-bottom: 1px dashed var(--primary-color);
-			// border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><rect x="0.5" y="0.5" width="14" height="14" style="fill:none;stroke:%23d1bc41;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:3,4;"/></svg>') 10% stretch;
-
 			&:hover {
 				@include diagPattern;
 
 				color: var(--white);
 			}
+		}
+	}
+
+	&-wrap {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+
+		.critter-table {
+			min-width: 650px;
 		}
 	}
 
@@ -234,6 +247,7 @@ export default {
 		text-align: left;
 
 		&-image-wrap {
+			flex-shrink: 0;
 			margin-bottom: 0;
 			margin-right: var(--spacer);
 		}
