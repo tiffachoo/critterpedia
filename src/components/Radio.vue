@@ -57,6 +57,16 @@ export default {
 	position: relative;
 	display: inline-flex;
 
+	svg {
+		display: block;
+		height: 2rem;
+		width: 2rem;
+	}
+
+	&-path {
+		fill: currentColor
+	}
+
 	&-label {
 		display: block;
 		padding: var(--spacer-sm);
@@ -65,10 +75,6 @@ export default {
 		background-color: var(--radio-background-color);
 		color: var(--radio-color);
 		cursor: pointer;
-
-		svg {
-			display: block;
-		}
 	}
 	
 	&-control {
@@ -82,13 +88,12 @@ export default {
 		}
 	}
 
-	&-group {
+	// &-group {
 		// line-height: 0;
-		text-align: right;
 
 		// .radio + .radio {
 		// 	margin-left: var(--spacer-sm);
 		// }
-	}
+	// }
 }
 </style>

@@ -51,6 +51,15 @@ export default {
 	display: inline-block;
 	transition: $scale-transition;
 
+	svg {
+		height: 1.5rem;
+		width: 1.5rem;
+	}
+	
+	&-path {
+		fill: currentColor
+	}
+
 	&-label {
 		position: relative;
 		display: block;
