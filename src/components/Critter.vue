@@ -44,8 +44,8 @@ export default {
 	},
 	computed: {
 		backgroundPosition() {
-			const x = ((this.id - 1) % 10) / 9 * 100;
-			const y = parseInt(this.id / 10 - 0.1) / 7 * 100;
+			const x = (((this.id - 1) % 10) / 9 * 100).toFixed(2);
+			const y = (parseInt((this.id / 10 - 0.1).toFixed(2)) / 7 * 100).toFixed(2);
 			return `${x}% ${y}%`
 		}
 	}
