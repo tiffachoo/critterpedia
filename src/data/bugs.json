@@ -1,0 +1,2178 @@
+{
+	"data": [
+		{
+			"id": 1,
+			"name": "Common Butterfly",
+			"price": 160,
+			"location": "Flying",
+			"time": {
+				"start": 4,
+				"end": 19
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					9,
+					10,
+					11,
+					12
+				],
+				"south": [
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 2,
+			"name": "Yellow Butterfly",
+			"price": 160,
+			"location": "Flying",
+			"time": {
+				"start": 4,
+				"end": 19
+			},
+			"months": {
+				"north": [
+					3,
+					4,
+					5,
+					6,
+					9,
+					10
+				],
+				"south": [
+					3,
+					4,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 3,
+			"name": "Tiger Butterfly",
+			"price": 240,
+			"location": "Flying",
+			"time": {
+				"start": 4,
+				"end": 19
+			},
+			"months": {
+				"north": [
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				],
+				"south": [
+					1,
+					2,
+					3,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 4,
+			"name": "Peacock Butterfly",
+			"price": 2500,
+			"location": "Flying",
+			"locationDetail": "Near black, blue, or purple flowers",
+			"time": {
+				"start": 4,
+				"end": 19
+			},
+			"months": {
+				"north": [
+					3,
+					4,
+					5,
+					6
+				],
+				"south": [
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 5,
+			"name": "Common Bluebottle",
+			"price": 300,
+			"location": "Flying",
+			"time": {
+				"start": 4,
+				"end": 19
+			},
+			"months": {
+				"north": [
+					4,
+					5,
+					6,
+					7,
+					8
+				],
+				"south": [
+					1,
+					2,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 6,
+			"name": "Paper Kite Butterfly",
+			"price": 1000,
+			"location": "Flying",
+			"time": {
+				"start": 8,
+				"end": 19
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 7,
+			"name": "Great Purple Emperor",
+			"price": 3000,
+			"location": "Flying",
+			"time": {
+				"start": 4,
+				"end": 19
+			},
+			"months": {
+				"north": [
+					5,
+					6,
+					7,
+					8
+				],
+				"south": [
+					1,
+					2,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 8,
+			"name": "Monarch Butterfly",
+			"price": 140,
+			"location": "Flying",
+			"time": {
+				"start": 4,
+				"end": 17
+			},
+			"months": {
+				"north": [
+					9,
+					10,
+					11
+				],
+				"south": [
+					3,
+					4,
+					5
+				]
+			}
+		},
+		{
+			"id": 9,
+			"name": "Emperor Butterfly",
+			"price": 4000,
+			"location": "Flying",
+			"time": {
+				"start": 19,
+				"end": 8
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					3,
+					6,
+					7,
+					8,
+					9,
+					12
+				],
+				"south": [
+					1,
+					2,
+					3,
+					6,
+					7,
+					8,
+					9,
+					12
+				]
+			}
+		},
+		{
+			"id": 10,
+			"name": "Agrias Butterfly",
+			"price": 3000,
+			"location": "Flying",
+			"time": {
+				"start": 8,
+				"end": 17
+			},
+			"months": {
+				"north": [
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				],
+				"south": [
+					1,
+					2,
+					3,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 11,
+			"name": "Rajah Brooke's Birdwing",
+			"price": 2500,
+			"location": "Flying",
+			"locationDetail": "Near hybrid flowers",
+			"time": {
+				"start": 8,
+				"end": 17
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					12
+				],
+				"south": [
+					1,
+					2,
+					5,
+					6,
+					7,
+					8,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 12,
+			"name": "Queen Alexandra's Birdwing",
+			"price": 4000,
+			"location": "Flying",
+			"time": {
+				"start": 8,
+				"end": 16
+			},
+			"months": {
+				"north": [
+					5,
+					6,
+					7,
+					8,
+					9
+				],
+				"south": [
+					1,
+					2,
+					3,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 13,
+			"name": "Moth",
+			"price": 130,
+			"location": "Flying",
+			"locationDetail": "Near lights",
+			"time": {
+				"start": 19,
+				"end": 4
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 14,
+			"name": "Atlas Moth",
+			"price": 3000,
+			"location": "On trees",
+			"time": {
+				"start": 19,
+				"end": 4
+			},
+			"months": {
+				"north": [
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				],
+				"south": [
+					1,
+					2,
+					3,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 15,
+			"name": "Madagascan Sunset Moth",
+			"price": 2500,
+			"location": "Flying",
+			"time": {
+				"start": 8,
+				"end": 16
+			},
+			"months": {
+				"north": [
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				],
+				"south": [
+					1,
+					2,
+					3,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 16,
+			"name": "Long Locust",
+			"price": 200,
+			"location": "On the ground",
+			"time": {
+				"start": 8,
+				"end": 19
+			},
+			"months": {
+				"north": [
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 17,
+			"name": "Migratory Locust",
+			"price": 600,
+			"location": "On the ground",
+			"time": {
+				"start": 8,
+				"end": 19
+			},
+			"months": {
+				"north": [
+					8,
+					9,
+					10,
+					11
+				],
+				"south": [
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		{
+			"id": 18,
+			"name": "Rice Grasshopper",
+			"price": 160,
+			"location": "On the ground",
+			"time": {
+				"start": 8,
+				"end": 19
+			},
+			"months": {
+				"north": [
+					8,
+					9,
+					10,
+					11
+				],
+				"south": [
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		{
+			"id": 19,
+			"name": "Grasshopper",
+			"price": 160,
+			"location": "On the ground",
+			"time": {
+				"start": 8,
+				"end": 17
+			},
+			"months": {
+				"north": [
+					7,
+					8,
+					9
+				],
+				"south": [
+					1,
+					2,
+					3
+				]
+			}
+		},
+		{
+			"id": 20,
+			"name": "Cricket",
+			"location": "On the ground",
+			"time": {
+				"start": 17,
+				"end": 8
+			},
+			"months": {
+				"north": [
+					9,
+					10,
+					11
+				],
+				"south": [
+					3,
+					4,
+					5
+				]
+			}
+		},
+		{
+			"id": 21,
+			"name": "Bell Cricket",
+			"location": "On the ground",
+			"time": {
+				"start": 17,
+				"end": 8
+			},
+			"months": {
+				"north": [
+					9,
+					10
+				],
+				"south": [
+					3,
+					4
+				]
+			}
+		},
+		{
+			"id": 22,
+			"name": "Mantis",
+			"location": "On flowers",
+			"time": {
+				"start": 8,
+				"end": 17
+			},
+			"months": {
+				"north": [
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 23,
+			"name": "Orchid Mantis",
+			"location": "On flowers",
+			"locationDetail": "White",
+			"time": {
+				"start": 8,
+				"end": 17
+			},
+			"months": {
+				"north": [
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 24,
+			"name": "Honeybee",
+			"location": "Flying",
+			"locationDetail": "Near flowers",
+			"time": {
+				"start": 8,
+				"end": 17
+			},
+			"months": {
+				"north": [
+					3,
+					4,
+					5,
+					6,
+					7
+				],
+				"south": [
+					1,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 25,
+			"name": "Wasp",
+			"location": "In trees",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 26,
+			"name": "Brown Cicada",
+			"location": "On trees",
+			"time": {
+				"start": 8,
+				"end": 17
+			},
+			"months": {
+				"north": [
+					7,
+					8
+				],
+				"south": [
+					1,
+					2
+				]
+			}
+		},
+		{
+			"id": 27,
+			"name": "Robust Cicada",
+			"location": "On trees",
+			"time": {
+				"start": 8,
+				"end": 17
+			},
+			"months": {
+				"north": [
+					7,
+					8
+				],
+				"south": [
+					1,
+					2
+				]
+			}
+		},
+		{
+			"id": 28,
+			"name": "Giant Cicada",
+			"location": "On trees",
+			"time": {
+				"start": 8,
+				"end": 17
+			},
+			"months": {
+				"north": [
+					7,
+					8
+				],
+				"south": [
+					1,
+					2
+				]
+			}
+		},
+		{
+			"id": 29,
+			"name": "Walker Cicada",
+			"location": "On trees",
+			"time": {
+				"start": 8,
+				"end": 17
+			},
+			"months": {
+				"north": [
+					8,
+					9
+				],
+				"south": [
+					2,
+					3
+				]
+			}
+		},
+		{
+			"id": 30,
+			"name": "Evening Cicada",
+			"location": "On trees",
+			"time": {
+				"start": 4,
+				"end": 8,
+				"start2": 16,
+				"end2": 19
+			},
+			"months": {
+				"north": [
+					7,
+					8
+				],
+				"south": [
+					1,
+					2
+				]
+			}
+		},
+		{
+			"id": 31,
+			"name": "Cicada Shell",
+			"location": "On trees",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					7,
+					8
+				],
+				"south": [
+					1,
+					2
+				]
+			}
+		},
+		{
+			"id": 32,
+			"name": "Red Dragonfly",
+			"location": "Flying",
+			"time": {
+				"start": 8,
+				"end": 19
+			},
+			"months": {
+				"north": [
+					9,
+					10
+				],
+				"south": [
+					3,
+					4
+				]
+			}
+		},
+		{
+			"id": 33,
+			"name": "Darner Dragonfly",
+			"location": "Flying",
+			"time": {
+				"start": 8,
+				"end": 17
+			},
+			"months": {
+				"north": [
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 34,
+			"name": "Banded Dragonfly",
+			"location": "Flying",
+			"time": {
+				"start": 8,
+				"end": 17
+			},
+			"months": {
+				"north": [
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 35,
+			"name": "Damselfly",
+			"location": "Flying",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					11,
+					12
+				],
+				"south": [
+					5,
+					6,
+					7,
+					8
+				]
+			}
+		},
+		{
+			"id": 36,
+			"name": "Firefly",
+			"location": "Flying",
+			"time": {
+				"start": 19,
+				"end": 4
+			},
+			"months": {
+				"north": [
+					6
+				],
+				"south": [
+					12
+				]
+			}
+		},
+		{
+			"id": 37,
+			"name": "Mole Cricket",
+			"location": "Underground",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					11,
+					12
+				],
+				"south": [
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11
+				]
+			}
+		},
+		{
+			"id": 38,
+			"name": "Pondskater",
+			"location": "On ponds and rivers",
+			"time": {
+				"start": 8,
+				"end": 19
+			},
+			"months": {
+				"north": [
+					5,
+					6,
+					7,
+					8,
+					9
+				],
+				"south": [
+					1,
+					2,
+					3,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 39,
+			"name": "Diving Beetle",
+			"location": "On ponds and rivers",
+			"time": {
+				"start": 8,
+				"end": 19
+			},
+			"months": {
+				"north": [
+					5,
+					6,
+					7,
+					8,
+					9
+				],
+				"south": [
+					1,
+					2,
+					3,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 40,
+			"name": "Giant Water Bug",
+			"price": 2000,
+			"location": "On ponds and rivers",
+			"time": {
+				"start": 19,
+				"end": 8
+			},
+			"months": {
+				"north": [
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				],
+				"south": [
+					1,
+					2,
+					3,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 41,
+			"name": "Stinkbug",
+			"price": 120,
+			"location": "On flowers",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 42,
+			"name": "Man-Faced Stink Bug",
+			"price": 1000,
+			"location": "On flowers",
+			"time": {
+				"start": 19,
+				"end": 8
+			},
+			"months": {
+				"north": [
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 43,
+			"name": "Ladybug",
+			"price": 200,
+			"location": "On flowers",
+			"time": {
+				"start": 8,
+				"end": 17
+			},
+			"months": {
+				"north": [
+					3,
+					4,
+					5,
+					6,
+					10
+				],
+				"south": [
+					4,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 44,
+			"name": "Tiger Beetle",
+			"price": 1500,
+			"location": "On the ground",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					8,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 45,
+			"name": "Jewel Beetle",
+			"price": 2400,
+			"location": "On tree stumps",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					4,
+					5,
+					6,
+					7,
+					8
+				],
+				"south": [
+					1,
+					2,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 46,
+			"name": "Violin Beetle",
+			"price": 450,
+			"location": "On tree stumps",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					5,
+					6,
+					9,
+					10,
+					11
+				],
+				"south": [
+					3,
+					4,
+					5,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 47,
+			"name": "Citrus Long-Horned Beetle",
+			"price": 350,
+			"location": "On tree stumps",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 48,
+			"name": "Rosalia Batesi Beetle",
+			"price": 3000,
+			"location": "On tree stumps",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					5,
+					6,
+					7,
+					8,
+					9
+				],
+				"south": [
+					1,
+					2,
+					3,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 49,
+			"name": "Blue Weevil Beetle",
+			"price": 800,
+			"location": "On trees",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					7,
+					8
+				],
+				"south": [
+					1,
+					2
+				]
+			}
+		},
+		{
+			"id": 50,
+			"name": "Dung Beetle",
+			"price": 3000,
+			"location": "On the ground",
+			"locationDetail": "Rolling snowballs",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					12
+				],
+				"south": [
+					6,
+					7,
+					8
+				]
+			}
+		},
+		{
+			"id": 51,
+			"name": "Earth-Boring Dung Beetle",
+			"price": 300,
+			"location": "On the ground",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					7,
+					8,
+					9
+				],
+				"south": [
+					1,
+					2,
+					3
+				]
+			}
+		},
+		{
+			"id": 52,
+			"name": "Scarab Beetle",
+			"price": 10000,
+			"location": "On trees",
+			"time": {
+				"start": 23,
+				"end": 8
+			},
+			"months": {
+				"north": [
+					7,
+					8
+				],
+				"south": [
+					1,
+					2
+				]
+			}
+		},
+		{
+			"id": 53,
+			"name": "Drone Beetle",
+			"price": 200,
+			"location": "On trees",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					6,
+					7,
+					8
+				],
+				"south": [
+					1,
+					2,
+					12
+				]
+			}
+		},
+		{
+			"id": 54,
+			"name": "Goliath Beetle",
+			"price": 8000,
+			"location": "On coconut trees",
+			"time": {
+				"start": 17,
+				"end": 8
+			},
+			"months": {
+				"north": [
+					6,
+					7,
+					8,
+					9
+				],
+				"south": [
+					1,
+					2,
+					3,
+					12
+				]
+			}
+		},
+		{
+			"id": 55,
+			"name": "Saw Stag",
+			"price": 2000,
+			"location": "On trees",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					7,
+					8
+				],
+				"south": [
+					1,
+					2
+				]
+			}
+		},
+		{
+			"id": 56,
+			"name": "Miyama Stag",
+			"price": 1000,
+			"location": "On trees",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					7,
+					8
+				],
+				"south": [
+					1,
+					2
+				]
+			}
+		},
+		{
+			"id": 57,
+			"name": "Giant Stag",
+			"price": 10000,
+			"location": "On trees",
+			"time": {
+				"start": 23,
+				"end": 8
+			},
+			"months": {
+				"north": [
+					7,
+					8
+				],
+				"south": [
+					1,
+					2
+				]
+			}
+		},
+		{
+			"id": 58,
+			"name": "Rainbow Stag",
+			"price": 6000,
+			"location": "On trees",
+			"time": {
+				"start": 19,
+				"end": 8
+			},
+			"months": {
+				"north": [
+					6,
+					7,
+					8,
+					9
+				],
+				"south": [
+					1,
+					2,
+					3,
+					12
+				]
+			}
+		},
+		{
+			"id": 59,
+			"name": "Cyclommatus Stag",
+			"price": 8000,
+			"location": "On coconut trees",
+			"time": {
+				"start": 17,
+				"end": 8
+			},
+			"months": {
+				"north": [
+					7,
+					8
+				],
+				"south": [
+					1,
+					2
+				]
+			}
+		},
+		{
+			"id": 60,
+			"name": "Golden Stag",
+			"price": 12000,
+			"location": "On coconut trees",
+			"time": {
+				"start": 17,
+				"end": 8
+			},
+			"months": {
+				"north": [
+					7,
+					8
+				],
+				"south": [
+					1,
+					2
+				]
+			}
+		},
+		{
+			"id": 61,
+			"name": "Giraffe Stag",
+			"price": 12000,
+			"location": "On trees",
+			"time": {
+				"start": 17,
+				"end": 8
+			},
+			"months": {
+				"north": [
+					7,
+					8
+				],
+				"south": [
+					1,
+					2
+				]
+			}
+		},
+		{
+			"id": 62,
+			"name": "Horned Dynastid",
+			"price": 1350,
+			"location": "On trees",
+			"time": {
+				"start": 17,
+				"end": 8
+			},
+			"months": {
+				"north": [
+					7,
+					8
+				],
+				"south": [
+					1,
+					2
+				]
+			}
+		},
+		{
+			"id": 63,
+			"name": "Horned Atlas",
+			"price": 8000,
+			"location": "On coconut trees",
+			"time": {
+				"start": 17,
+				"end": 8
+			},
+			"months": {
+				"north": [
+					7,
+					8
+				],
+				"south": [
+					1,
+					2
+				]
+			}
+		},
+		{
+			"id": 64,
+			"name": "Horned Elephant",
+			"price": 8000,
+			"location": "On coconut trees",
+			"time": {
+				"start": 17,
+				"end": 8
+			},
+			"months": {
+				"north": [
+					7,
+					8
+				],
+				"south": [
+					1,
+					2
+				]
+			}
+		},
+		{
+			"id": 65,
+			"name": "Horned Hercules",
+			"price": 12000,
+			"location": "On coconut trees",
+			"time": {
+				"start": 17,
+				"end": 8
+			},
+			"months": {
+				"north": [
+					7,
+					8
+				],
+				"south": [
+					1,
+					2
+				]
+			}
+		},
+		{
+			"id": 66,
+			"name": "Walking Stick",
+			"price": 600,
+			"location": "On trees",
+			"time": {
+				"start": 4,
+				"end": 8,
+				"start2": 17,
+				"end2": 19
+			},
+			"months": {
+				"north": [
+					7,
+					8,
+					9,
+					10,
+					11
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		{
+			"id": 67,
+			"name": "Walking Leaf",
+			"price": 600,
+			"location": "Under trees",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					7,
+					8,
+					9
+				],
+				"south": [
+					1,
+					2,
+					3
+				]
+			}
+		},
+		{
+			"id": 68,
+			"name": "Bagworm",
+			"price": 600,
+			"location": "In trees",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 69,
+			"name": "Ant",
+			"price": 80,
+			"location": "Near rotten food",
+			"locationDetail": "Turnips and fruit",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 70,
+			"name": "Hermit Crab",
+			"price": 1000,
+			"location": "On the beach",
+			"time": {
+				"start": 19,
+				"end": 8
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 71,
+			"name": "Wharf Roach",
+			"price": 200,
+			"location": "On beach rocks",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 72,
+			"name": "Fly",
+			"price": 60,
+			"location": "Near trash",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 73,
+			"name": "Mosquito",
+			"price": 130,
+			"location": "Flying",
+			"time": {
+				"start": 17,
+				"end": 4
+			},
+			"months": {
+				"north": [
+					6,
+					7,
+					8,
+					9
+				],
+				"south": [
+					1,
+					2,
+					3,
+					12
+				]
+			}
+		},
+		{
+			"id": 74,
+			"name": "Flea",
+			"price": 70,
+			"location": "On villagers",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 75,
+			"name": "Snail",
+			"price": 250,
+			"location": "On rocks and shrubs",
+			"locationDetail": "Raining or snowing",
+			"time": {
+				"start": 0,
+				"end": 24
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 76,
+			"name": "Pill Bug",
+			"price": 250,
+			"location": "Under rocks",
+			"time": {
+				"start": 23,
+				"end": 16
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					9,
+					10,
+					11,
+					12
+				],
+				"south": [
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 77,
+			"name": "Centipede",
+			"price": 300,
+			"location": "Under rocks",
+			"time": {
+				"start": 16,
+				"end": 23
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					9,
+					10,
+					11,
+					12
+				],
+				"south": [
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 78,
+			"name": "Spider",
+			"price": 480,
+			"location": "In trees",
+			"time": {
+				"start": 19,
+				"end": 8
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12
+				]
+			}
+		},
+		{
+			"id": 79,
+			"name": "Tarantula",
+			"price": 8000,
+			"location": "On the ground",
+			"time": {
+				"start": 19,
+				"end": 4
+			},
+			"months": {
+				"north": [
+					1,
+					2,
+					3,
+					4,
+					11,
+					12
+				],
+				"south": [
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			}
+		},
+		{
+			"id": 80,
+			"name": "Scorpion",
+			"price": 8000,
+			"location": "On the ground",
+			"time": {
+				"start": 19,
+				"end": 4
+			},
+			"months": {
+				"north": [
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				],
+				"south": [
+					1,
+					2,
+					3,
+					4,
+					11,
+					12
+				]
+			}
+		}
+	]
+}
