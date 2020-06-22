@@ -554,6 +554,7 @@
 		{
 			"id": 20,
 			"name": "Cricket",
+			"price": 130,
 			"location": "On the ground",
 			"time": {
 				"start": 17,
@@ -575,6 +576,7 @@
 		{
 			"id": 21,
 			"name": "Bell Cricket",
+			"price": 430,
 			"location": "On the ground",
 			"time": {
 				"start": 17,
@@ -594,6 +596,7 @@
 		{
 			"id": 22,
 			"name": "Mantis",
+			"price": 430,
 			"location": "On flowers",
 			"time": {
 				"start": 8,
@@ -627,6 +630,7 @@
 		{
 			"id": 23,
 			"name": "Orchid Mantis",
+			"price": 2400,
 			"location": "On flowers",
 			"locationDetail": "White",
 			"time": {
@@ -661,6 +665,7 @@
 		{
 			"id": 24,
 			"name": "Honeybee",
+			"price": 200,
 			"location": "Flying",
 			"locationDetail": "Near flowers",
 			"time": {
@@ -687,6 +692,7 @@
 		{
 			"id": 25,
 			"name": "Wasp",
+			"price": 2500,
 			"location": "In trees",
 			"time": {
 				"start": 0,
@@ -726,6 +732,7 @@
 		{
 			"id": 26,
 			"name": "Brown Cicada",
+			"price": 250,
 			"location": "On trees",
 			"time": {
 				"start": 8,
@@ -745,6 +752,7 @@
 		{
 			"id": 27,
 			"name": "Robust Cicada",
+			"price": 300,
 			"location": "On trees",
 			"time": {
 				"start": 8,
@@ -764,6 +772,7 @@
 		{
 			"id": 28,
 			"name": "Giant Cicada",
+			"price": 500,
 			"location": "On trees",
 			"time": {
 				"start": 8,
@@ -783,6 +792,7 @@
 		{
 			"id": 29,
 			"name": "Walker Cicada",
+			"price": 400,
 			"location": "On trees",
 			"time": {
 				"start": 8,
@@ -802,6 +812,7 @@
 		{
 			"id": 30,
 			"name": "Evening Cicada",
+			"price": 550,
 			"location": "On trees",
 			"time": {
 				"start": 4,
@@ -823,6 +834,7 @@
 		{
 			"id": 31,
 			"name": "Cicada Shell",
+			"price": 10,
 			"location": "On trees",
 			"time": {
 				"start": 0,
@@ -842,6 +854,7 @@
 		{
 			"id": 32,
 			"name": "Red Dragonfly",
+			"price": 180,
 			"location": "Flying",
 			"time": {
 				"start": 8,
@@ -861,6 +874,7 @@
 		{
 			"id": 33,
 			"name": "Darner Dragonfly",
+			"price": 230,
 			"location": "Flying",
 			"time": {
 				"start": 8,
@@ -890,6 +904,7 @@
 		{
 			"id": 34,
 			"name": "Banded Dragonfly",
+			"price": 4500,
 			"location": "Flying",
 			"time": {
 				"start": 8,
@@ -917,6 +932,7 @@
 		{
 			"id": 35,
 			"name": "Damselfly",
+			"price": 500,
 			"location": "Flying",
 			"time": {
 				"start": 0,
@@ -940,6 +956,7 @@
 		{
 			"id": 36,
 			"name": "Firefly",
+			"price": 300,
 			"location": "Flying",
 			"time": {
 				"start": 19,
@@ -957,6 +974,7 @@
 		{
 			"id": 37,
 			"name": "Mole Cricket",
+			"price": 500,
 			"location": "Underground",
 			"time": {
 				"start": 0,
@@ -986,6 +1004,7 @@
 		{
 			"id": 38,
 			"name": "Pondskater",
+			"price": 130,
 			"location": "On ponds and rivers",
 			"time": {
 				"start": 8,
@@ -1011,6 +1030,7 @@
 		{
 			"id": 39,
 			"name": "Diving Beetle",
+			"price": 800,
 			"location": "On ponds and rivers",
 			"time": {
 				"start": 8,
