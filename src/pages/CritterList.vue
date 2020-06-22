@@ -155,7 +155,7 @@ export default {
 			isNow: false,
 			selectedHemis: 'north',
 			selectedLayout: 'grid',
-			selectedLocation: '',
+			selectedLocation: null,
 			selectedMonth: 1,
 			months: [
 				{
@@ -265,6 +265,8 @@ export default {
 		},
 		'$route'() {
 			this.getCritters();
+
+			this.selectedLocation = null;
 		}
 	},
 	beforeMount() {
