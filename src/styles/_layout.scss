@@ -13,17 +13,29 @@
 
 .container-grid {
 	display: grid;
-	grid-gap: var(--spacer);
 	grid-template-areas: 
-		'header nav'
-		'main main';
-	grid-template-columns: 2fr 1fr;
+		'header'
+		'nav'
+		'main';
+	grid-gap: var(--spacer);
 	margin-top: var(--spacer-lg);
 	margin-bottom: var(--spacer-lg);
+
+	@media (min-width: $sm) {
+		grid-template-areas: 
+			'header nav'
+			'main main';
+		grid-template-columns: 2fr 1fr;
+	}
 }
 
 .header {
 	grid-area: header;
+
+	@media (max-width: $sm - 1) {
+		padding-top: 4.5rem;
+		text-align: center;
+	}
 }
 
 .main {
