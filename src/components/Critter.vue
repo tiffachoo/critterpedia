@@ -67,6 +67,10 @@ export default {
 	background-color: var(--critter-background-color);
 	text-align: center;
 
+	@media (max-width: $sm - 1) {
+		--critter-size: 4rem;
+	}
+
 	&-badge {
 		position: absolute;
 		top: 0.625rem;
