@@ -13,17 +13,29 @@
 
 .container-grid {
 	display: grid;
-	grid-gap: var(--spacer);
 	grid-template-areas: 
 		'header nav'
 		'main main';
 	grid-template-columns: 2fr 1fr;
+	grid-gap: var(--spacer);
 	margin-top: var(--spacer-lg);
 	margin-bottom: var(--spacer-lg);
+
+	@media (max-width: $sm - 1) {
+	grid-template-areas: 
+		'header'
+		'main';
+	grid-template-columns: 100%;
+	}
 }
 
 .header {
 	grid-area: header;
+
+	@media (max-width: $sm - 1) {
+		padding-top: 4.5rem;
+		text-align: center;
+	}
 }
 
 .main {
@@ -34,6 +46,11 @@
 .nav, 
 .main {
 	flex: 0 0 100%; 
+}
+
+.well {
+	padding: var(--spacer);
+	background-color: var(--primary-color-tint);
 }
 
 // utils

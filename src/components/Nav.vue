@@ -69,6 +69,16 @@ export default {
 	align-self: center;
 	justify-self: end;
 
+	@media (max-width: $sm - 1) {
+		position: fixed;
+		z-index: 99;
+		top: 0;
+		left: 0;
+		justify-content: flex-end;
+		width: 100%;
+		padding: var(--spacer);
+	}
+
 	.button {
 		--button-sparks-line-offset: 10px;
 	}

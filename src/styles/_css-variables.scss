@@ -16,6 +16,14 @@
 	--spacer: #{$spacer};
 	--spacer-lg: #{$spacer-lg};
 
+	--h1-font-size: 4rem;
+	--h2-font-size: 2rem;
+
 	--diag-color-1: var(--primary-color);
 	--diag-color-2: var(--primary-color-dark);
+
+	@media (max-width: $sm - 1) {
+		--h1-font-size: 2.75rem;
+		--h2-font-size: 1.5rem;
+	}
 }
