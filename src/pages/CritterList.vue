@@ -107,26 +107,34 @@
 				</svg>
 			</cp-radio>
 		</fieldset>
-		<transition-group
-			v-if="selectedLayout === 'grid'"
-			class="critter-list-content"
-			name="critter-transition"
-			tag="ul"
-		>
-			<cp-critter
-				v-for="critter in displayedCritters"
-				:id="critter.id"
-				:key="critter.id"
-				:badge="checkCritterIsNewMonth(critter['months'][selectedHemis])"
+		<div v-if="displayedCritters.length">
+			<transition-group
+				v-if="selectedLayout === 'grid'"
+				class="critter-list-content"
+				name="critter-transition"
+				tag="ul"
+			>
+				<cp-critter
+					v-for="critter in displayedCritters"
+					:id="critter.id"
+					:key="critter.id"
+					:badge="checkCritterIsNewMonth(critter['months'][selectedHemis])"
+					:image="critterImage"
+					:name="critter.name"
+				/>
+			</transition-group>
+			<cp-critter-table 
+				v-else
+				:data="displayedCritters" 
 				:image="critterImage"
-				:name="critter.name"
 			/>
-		</transition-group>
-		<cp-critter-table 
+		</div>
+		<div 
 			v-else
-			:data="displayedCritters" 
-			:image="critterImage"
-		/>
+			class="well"
+		>
+			Sorry! There are no critters available in the specified filters. 😢
+		</div>
 	</section>
 </template>
 
@@ -304,7 +312,6 @@ export default {
 		display: grid;
 		grid-gap: var(--spacer);
 		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-		margin-top: var(--spacer);
 	}
 
 	&-filter {
@@ -319,6 +326,7 @@ export default {
 
 	&-filter-layout {
 		margin-top: calc(-1 * var(--spacer));
+		margin-bottom: var(--spacer);
 		text-align: right;
 	}
 }

@@ -48,6 +48,11 @@
 	flex: 0 0 100%; 
 }
 
+.well {
+	padding: var(--spacer);
+	background-color: var(--primary-color-tint);
+}
+
 // utils
 // -----------------------------------
 
