@@ -321,24 +321,37 @@ export default {
 	--content-offset: 10rem;
 	--aside-offset: 7rem;
 
-	display: grid;
-	grid-template-columns: 1fr 3fr;
+	@media (max-width: $sm - 1) {
+		--content-offset: 2rem;
+		--aside-offset: 5rem;
+	}
+
+	@media (min-width: $sm) {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+	}
 
 	&-items {
 		position: relative;
 		display: grid;
 		grid-gap: var(--spacer);
 		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+		border-radius: $border-radius-sm;
+		overflow: hidden;
 	}
 
 	&-header { 
-		text-align: right;
 		margin-top: -4rem;
-		margin-bottom: var(--spacer-lg);
+		margin-bottom: 1.5rem;
+
+		@media (min-width: $sm) {
+			text-align: right;
+		}
 	}
 
 	&-content {
 		grid-column-start: 2;
+		min-width: 100%;
 		margin-top: var(--content-offset);
 		padding: var(--spacer-lg);
 		border-radius: $border-radius;
@@ -351,9 +364,13 @@ export default {
 		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 		align-self: start;
 		padding: var(--spacer-lg) var(--spacer);
-		border-top-left-radius: $border-radius;
-		border-bottom-left-radius: $border-radius;
+		border-radius: $border-radius;
 		background-color: var(--secondary-color-tint);
+
+		@media (min-width: $sm) {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
 	}
 
 	&-filter-layout {

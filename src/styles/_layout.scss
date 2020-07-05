@@ -7,6 +7,10 @@
 	gap: var(--spacer);
 	padding-left: var(--spacer);
 	padding-right: var(--spacer);
+
+	@media (max-width: $sm - 1) {
+		grid-template-columns: 100%;
+	}
 }
 
 .header {
@@ -14,7 +18,9 @@
 }
 
 .main {
-	grid-column-start: 2;
+	@media (min-width: $sm) {
+		grid-column-start: 2;
+	}
 }
 
 .critter-background {
@@ -23,12 +29,18 @@
 	top: 0;
 	left: 0;
 	height: 70vh;
+	min-height: 21rem;
 	width: 100%;
 	background-color: var(--secondary-color);
+
+	@media (max-width: $sm - 1) {
+		height: 100%;
+	}
 }
 
 .well {
 	padding: var(--spacer);
+	border-radius: $border-radius-sm;
 	background-color: var(--primary-color-tint);
 }
 
