@@ -2,50 +2,29 @@
 // -----------------------------------
 
 .container {
-	display: flex;
-	flex-wrap: wrap;
-	max-width: 1140px;
-	margin-left: auto;
-	margin-right: auto;
+	display: grid;
+	grid-template-columns: 1fr minmax(auto, var(--container-width)) 1fr;
+	gap: var(--spacer);
 	padding-left: var(--spacer);
 	padding-right: var(--spacer);
 }
 
-.container-grid {
-	display: grid;
-	grid-template-areas: 
-		'header nav'
-		'main main';
-	grid-template-columns: 2fr 1fr;
-	grid-gap: var(--spacer);
-	margin-top: var(--spacer-lg);
-	margin-bottom: var(--spacer-lg);
-
-	@media (max-width: $sm - 1) {
-	grid-template-areas: 
-		'header'
-		'main';
-	grid-template-columns: 100%;
-	}
-}
-
 .header {
-	grid-area: header;
-
-	@media (max-width: $sm - 1) {
-		padding-top: 4.5rem;
-		text-align: center;
-	}
+	text-align: right;
 }
 
 .main {
-	grid-area: main;
+	grid-column-start: 2;
 }
 
-.header, 
-.nav, 
-.main {
-	flex: 0 0 100%; 
+.critter-background {
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	height: 70vh;
+	width: 100%;
+	background-color: var(--secondary-color);
 }
 
 .well {

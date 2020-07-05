@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Varela+Round&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Varela+Round&family=Zilla+Slab&display=swap';
 
 body {
 	background-color: var(--white);
@@ -14,23 +14,23 @@ h1 {
 	display: inline-block;
 	font-family: $heading-font-family;
 	font-size: var(--h1-font-size);
-	line-height: 1.125;
+	line-height: 0.75;
+	color: var(--white);
 
-	&::after {
-		content: '';
-		position: absolute;
-		z-index: -1;
-		bottom: 0.5rem;
-		left: -0.5rem;
-		width: 100%;
-		height: 1rem;
-		border-radius: $border-radius;
-		background-color: var(--secondary-color-tint);
-	}
+	// &::before {
+	// 	content: '';
+	// 	position: absolute;
+	// 	z-index: -1;
+	// 	top: 0.5rem;
+	// 	left: -0.5rem;
+	// 	width: 100%;
+	// 	height: 60%;
+	// 	background-color: var(--secondary-color-darkest);
+	// }
 }
 
 h2 {
-	font-family: $heading-font-family;
+	font-family: $heading-secondary-font-family;
 	font-size: var(--h2-font-size);
 	line-height: 1.125;
 }
@@ -39,7 +39,7 @@ h2 {
 	display: inline-block;
 	padding: var(--spacer-sm) var(--spacer);
 	margin-bottom: calc(-1 * var(--spacer));
-	transform: rotate(-5deg);
+	transform: rotate(5deg);
 	border-radius: $border-radius;
 	background-color: var(--primary-color-darkest);
 	line-height: 1;

@@ -1,11 +1,7 @@
 <template>
 	<div id="app">
-		<div class="container container-grid">
-			<header class="header">
-				<h1>
-					Critterpedia
-				</h1>
-			</header>
+		<div class="container">
+			<div class="critter-background"></div>
 			<cp-nav />
 			<main class="main">
 				<router-view />
