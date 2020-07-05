@@ -147,7 +147,7 @@ export default {
 	width: 100%;
 
 	%th {
-		font-family: $primary-font-family;
+		font-family: $heading-font-family;
 		font-size: 1rem;
 		color: var(--th-color);
 		text-align: left;
@@ -220,8 +220,6 @@ export default {
 		tr {
 			&:hover {
 				@include diagPattern;
-
-				color: var(--white);
 			}
 		}
 	}

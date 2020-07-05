@@ -79,7 +79,7 @@ export default {
 		width: $badge-size;
 		border-radius: 100%;
 		border: $border-width solid var(--white);
-		background-color: var(--secondary-color);
+		background-color: var(--accent-color);
 	}
 
 	&-image {
