@@ -44,8 +44,8 @@ export default {
 
 <style lang="scss">
 .checkbox {
-	--checkbox-color: var(--primary-color);
-	--checkbox-checked-color: var(--primary-color);
+	--checkbox-color: var(--secondary-color);
+	--checkbox-checked-color: var(--secondary-color);
 
 	position: relative;
 	display: inline-block;
@@ -54,6 +54,10 @@ export default {
 	svg {
 		height: 1.5rem;
 		width: 1.5rem;
+	}
+
+	.tooltip {
+		--tooltip-background-color: var(--secondary-color-darkest);
 	}
 	
 	&-path {

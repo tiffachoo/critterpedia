@@ -2,29 +2,36 @@
 // -----------------------------------
 
 $sm: 576px;
+$md: 768px;
 
 $black: #444;
 $grey: #777;
 $grey-tint: #eee;
 $white: #fff;
 
-$primary-color-darkest: #a8931b;
-$primary-color-dark: #c7b12e; // slightly lighter? c9b32e
-$primary-color: #d1bc41;
-$primary-color-tint: #f5ecc6;
+$primary-color-darkest: #af9217;
+$primary-color-darker: #af9217;
+$primary-color-dark: #e0bf38;
+$primary-color: #eacc39;
+$primary-color-tint: #fff3c0;
 
-$secondary-color-darkest: #068088;
-$secondary-color-dark: #3ac2c9;
+$secondary-color-darkest: #0c8181;
+$secondary-color-darker: #20a4a4;
+$secondary-color-dark: #46c6c6;
 $secondary-color: #4ed1d8;
-$secondary-color-tint: #a5eff2;
+$secondary-color-tint: #d2fffe;
+
+$accent-color: #ff4a82;
 
 $primary-font-family: 'Varela Round', 'Roboto', sans-serif;
-$heading-font-family: $primary-font-family;
+$heading-font-family: 'Zilla Slab', sans-serif;
+$heading-secondary-font-family: $primary-font-family;
 
 $spacer-sm: 0.5rem;
 $spacer: 1rem;
 $spacer-lg: 2rem;
 
+$border-radius-sm: 1rem;
 $border-radius: 1.5rem;
 $border-width: 3px;
 

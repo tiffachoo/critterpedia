@@ -39,6 +39,8 @@ export default {
 
 <style lang="scss">
 .selector {
+	--selector-color: var(--secondary-color);
+	
 	display: grid;
 	grid-template-columns: 3fr 1fr;
 
@@ -49,7 +51,7 @@ export default {
 		justify-self: end;
 		width: 0.875rem;
 		margin: $border-width var(--spacer) $border-width 0;
-		color: var(--primary-color);
+		color: var(--selector-color);
 		transition: 0.3s ease-in-out;
 		pointer-events: none;
 
@@ -64,7 +66,7 @@ export default {
 		width: 100%;
 		padding: var(--spacer-sm) var(--spacer);
 		border-radius: $border-radius;
-		border: $border-width solid var(--primary-color);
+		border: $border-width solid var(--selector-color);
 		background-color: var(--white);
 		font-family: $primary-font-family;
 		font-size: 1.125rem;

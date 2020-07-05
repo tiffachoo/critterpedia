@@ -25,26 +25,28 @@
 
 <style lang="scss">
 .tooltip {
+	--tooltip-background-color: var(--primary-color-darkest);
+
 	position: relative;
 
 	&-content {
 		position: absolute;
 		bottom: calc(100% + 0.125rem);
 		left: 50%;
-		transform: var(--checkbox-tooltip-transform, translate(-50%, 0.25rem));
+		transform: var(--tooltip-transform, translate(-50%, 0.25rem));
 		padding: 0.25rem var(--spacer-sm);
 		border-radius: $border-radius;
-		background-color: var(--primary-color-darkest);
+		background-color: var(--tooltip-background-color);
 		font-size: 0.75rem;
 		color: var(--white);
 		white-space: nowrap;
-		opacity: var(--checkbox-tooltip-opacity, 0);
+		opacity: var(--tooltip-opacity, 0);
 		transition: opacity 0.15s, transform 0.3s ease-in-out;
 	}
 
 	&:hover {
-		--checkbox-tooltip-transform: translateX(-50%);
-		--checkbox-tooltip-opacity: 1;
+		--tooltip-transform: translateX(-50%);
+		--tooltip-opacity: 1;
 	}
 }
 </style>
