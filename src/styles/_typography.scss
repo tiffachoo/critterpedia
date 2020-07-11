@@ -9,6 +9,11 @@ body {
 	color: var(--black);
 }
 
+:focus {
+	outline: 2px solid var(--accent-color);
+	outline-offset: 1px;
+}
+
 h1 {
 	position: relative;
 	display: inline-block;

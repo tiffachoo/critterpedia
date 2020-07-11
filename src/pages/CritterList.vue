@@ -362,7 +362,7 @@ export default {
 	&-filter {
 		display: grid;
 		grid-gap: var(--spacer);
-		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
 		align-self: start;
 		padding: var(--spacer-lg) var(--spacer);
 		border-radius: $border-radius;
@@ -371,6 +371,12 @@ export default {
 		@media (min-width: $sm) {
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
+		}
+
+		@media (min-width: $sm) {
+			.selector {
+				width: calc(100% + var(--spacer-lg));
+			}
 		}
 	}
 
