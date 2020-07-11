@@ -64,7 +64,7 @@ export default {
 
 	&-tooltip {
 		position: absolute;
-		bottom: calc(100% - 0.25rem);
+		bottom: calc(100% - var(--spacer-xs));
 		left: 50%;
 		transform: translateX(-50%);
 		padding: var(--spacer-sm) var(--spacer);
