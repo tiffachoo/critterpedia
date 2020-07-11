@@ -30,7 +30,8 @@ export default {
 		circle: Boolean,
 		color: {
 			type: String,
-			default: 'primary'
+			default: 'primary',
+			validator: value => ['primary', 'secondary', 'white'].indexOf(value) !== -1
 		},
 		tooltipText: String
 	}
@@ -41,7 +42,7 @@ export default {
 .button {
 	--button-border-color: var(--primary-color);
 	--button-background-color: var(--primary-color);
-	--button-color: var(--white);
+	--button-color: var(--black);
 	--button-tooltip-background-color: var(--primary-color-darkest);
 	--button-active-background-color: var(--primary-color-darkest);
 	--button-sparks-line-offset: 5px;
@@ -64,7 +65,7 @@ export default {
 
 	&-tooltip {
 		position: absolute;
-		bottom: calc(100% - 0.25rem);
+		bottom: calc(100% - var(--spacer-xs));
 		left: 50%;
 		transform: translateX(-50%);
 		padding: var(--spacer-sm) var(--spacer);
@@ -136,6 +137,17 @@ export default {
 	&-secondary {
 		--button-border-color: var(--secondary-color);
 		--button-background-color: var(--secondary-color);
+		--button-tooltip-background-color: var(--secondary-color-darkest);
+		--button-active-background-color: var(--secondary-color-darkest);
+		--button-color: var(--white);
+		--diag-color-1: var(--secondary-color);
+		--diag-color-2: var(--secondary-color-dark);
+	}
+
+	&-white {
+		--button-border-color: var(--white);
+		--button-background-color: var(--white);
+		--button-color: var(--secondary-color-darkest);
 		--button-tooltip-background-color: var(--secondary-color-darkest);
 		--button-active-background-color: var(--secondary-color-darkest);
 		--diag-color-1: var(--secondary-color);

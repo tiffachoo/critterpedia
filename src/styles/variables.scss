@@ -3,6 +3,9 @@
 
 $sm: 576px;
 $md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
 
 $black: #444;
 $grey: #777;
@@ -27,6 +30,7 @@ $primary-font-family: 'Varela Round', 'Roboto', sans-serif;
 $heading-font-family: 'Zilla Slab', sans-serif;
 $heading-secondary-font-family: $primary-font-family;
 
+$spacer-xs: 0.25rem;
 $spacer-sm: 0.5rem;
 $spacer: 1rem;
 $spacer-lg: 2rem;

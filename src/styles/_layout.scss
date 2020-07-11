@@ -18,6 +18,8 @@
 }
 
 .main {
+	padding-bottom: var(--spacer-lg);
+	
 	@media (min-width: $sm) {
 		grid-column-start: 2;
 	}

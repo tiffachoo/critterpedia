@@ -3,6 +3,7 @@
 	--grey: #{$grey};
 	--grey-tint: #{$grey-tint};
 	--white: #{$white};
+	--white-rgb: 255, 255, 255;
 	--primary-color-darkest: #{$primary-color-darkest};
 	--primary-color-dark: #{$primary-color-dark};
 	--primary-color: #{$primary-color};
@@ -13,6 +14,7 @@
 	--secondary-color-tint: #{$secondary-color-tint};
 	--accent-color: #{$accent-color};
 
+	--spacer-xs: #{$spacer-xs};
 	--spacer-sm: #{$spacer-sm};
 	--spacer: #{$spacer};
 	--spacer-lg: #{$spacer-lg};
@@ -32,5 +34,7 @@
 	@media (max-width: $sm - 1) {
 		--h1-font-size: 3rem;
 		--h2-font-size: 1.5rem;
+
+		--spacer-lg: 1.5rem;
 	}
 }

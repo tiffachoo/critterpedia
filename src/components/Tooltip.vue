@@ -33,8 +33,8 @@
 		position: absolute;
 		bottom: calc(100% + 0.125rem);
 		left: 50%;
-		transform: var(--tooltip-transform, translate(-50%, 0.25rem));
-		padding: 0.25rem var(--spacer-sm);
+		transform: var(--tooltip-transform, translate(-50%, var(--spacer-xs)));
+		padding: var(--spacer-xs) var(--spacer-sm);
 		border-radius: $border-radius;
 		background-color: var(--tooltip-background-color);
 		font-size: 0.75rem;

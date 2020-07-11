@@ -12,13 +12,13 @@
 						id="selectMonth"
 						v-model.number="selectedMonth"
 						:options="months"	
-						aria-label="Select a month"
+						label="Month"
 					/>
 					<cp-selector 
 						id="selectLocation"
 						v-model="selectedLocation"
 						:options="locationList"	
-						aria-label="Select a location"
+						label="Location"
 					/>
 					<div class="checkbox-group">
 						<cp-checkbox 
@@ -335,16 +335,17 @@ export default {
 		position: relative;
 		display: grid;
 		grid-gap: var(--spacer);
-		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
 		border-radius: $border-radius-sm;
 		overflow: hidden;
 	}
 
 	&-header { 
-		margin-top: -4rem;
+		margin-top: -3rem;
 		margin-bottom: 1.5rem;
 
 		@media (min-width: $sm) {
+			margin-top: -4rem;
 			text-align: right;
 		}
 	}
@@ -361,7 +362,7 @@ export default {
 	&-filter {
 		display: grid;
 		grid-gap: var(--spacer);
-		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
 		align-self: start;
 		padding: var(--spacer-lg) var(--spacer);
 		border-radius: $border-radius;
@@ -370,6 +371,12 @@ export default {
 		@media (min-width: $sm) {
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
+		}
+
+		@media (min-width: $sm) {
+			.selector {
+				width: calc(100% + var(--spacer-lg));
+			}
 		}
 	}
 

@@ -16,18 +16,6 @@
 						</button>
 					</th>
 					<th
-						:aria-sort="sortKey === 'location' ? `${sortDirection}ending` : null"
-						class="critter-table-th-sort"
-					>
-						<button 
-							:class="{ [sortDirection]: sortKey === 'location' }"
-							class="critter-table-th-sort-button"
-							@click="sortColumn('location')"
-						>
-							Location
-						</button>
-					</th>
-					<th
 						:aria-sort="sortKey === 'price' ? `${sortDirection}ending` : null"
 						class="critter-table-th-sort"
 					>
@@ -39,8 +27,24 @@
 							Price
 						</button>
 					</th>
-					<th>Time</th>
-					<th>Months</th>
+					<th
+						:aria-sort="sortKey === 'location' ? `${sortDirection}ending` : null"
+						class="critter-table-th-sort"
+					>
+						<button 
+							:class="{ [sortDirection]: sortKey === 'location' }"
+							class="critter-table-th-sort-button"
+							@click="sortColumn('location')"
+						>
+							Location
+						</button>
+					</th>
+					<th>
+						Time
+					</th>
+					<th>
+						Months
+					</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -56,14 +60,13 @@
 							:name="critter.name"
 							tag="div"
 						/>
-						<!-- {{ critter.name }} -->
+					</td>
+					<td>
+						{{ formatNumber(critter.price) }}
 					</td>
 					<td>
 						{{ critter.location }} 
 						<span v-if="critter.locationDetail">({{ critter.locationDetail }})</span>
-					</td>
-					<td>
-						{{ formatNumber(critter.price) }}
 					</td>
 					<td>
 						{{ displayTimes(critter.time.start, critter.time.end) }}
@@ -141,17 +144,18 @@ export default {
 </script>
 
 <style lang="scss">
+%th {
+	font-family: $heading-font-family;
+	font-size: 1rem;
+	color: var(--th-color);
+	text-align: left;
+}
+
 .critter-table {
 	--th-color: var(--primary-color-darkest);
 
+	position: relative;
 	width: 100%;
-
-	%th {
-		font-family: $heading-font-family;
-		font-size: 1rem;
-		color: var(--th-color);
-		text-align: left;
-	}
 
 	th:not(.critter-table-th-sort),
 	td,
@@ -208,6 +212,12 @@ export default {
 	> thead {
 		th {
 			@extend %th;
+
+			position: sticky;
+			z-index: 10;
+			top: 0;
+			box-shadow: 0 $border-width 0 var(--primary-color);
+			background-color: var(--white);
 		}
 	}
 
@@ -218,6 +228,10 @@ export default {
 		}
 
 		tr {
+			&:nth-child(odd) {
+				background-color: var(--primary-color-tint);
+			}
+
 			&:hover {
 				@include diagPattern;
 			}
@@ -225,11 +239,13 @@ export default {
 	}
 
 	&-wrap {
-		overflow-x: auto;
-		-webkit-overflow-scrolling: touch;
-
-		.critter-table {
-			min-width: 650px;
+		@media (max-width: $lg - 1) {
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
+	
+			.critter-table {
+				min-width: 650px;
+			}
 		}
 	}
 
