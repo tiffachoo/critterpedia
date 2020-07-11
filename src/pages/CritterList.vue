@@ -335,16 +335,17 @@ export default {
 		position: relative;
 		display: grid;
 		grid-gap: var(--spacer);
-		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
 		border-radius: $border-radius-sm;
 		overflow: hidden;
 	}
 
 	&-header { 
-		margin-top: -4rem;
+		margin-top: -3rem;
 		margin-bottom: 1.5rem;
 
 		@media (min-width: $sm) {
+			margin-top: -4rem;
 			text-align: right;
 		}
 	}

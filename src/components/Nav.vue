@@ -64,21 +64,28 @@ export default {
 
 <style lang="scss">
 .nav {
+	--button-size: 4.5rem;
+
 	position: fixed;
 	z-index: 99;
-	top: var(--spacer);
+	top: calc(var(--spacer) + 0.5rem);
 	left: var(--spacer);
 	display: flex;
 	align-self: center;
 	justify-self: start;
+
+
+	@media (max-width: $sm - 1) {
+		--button-size: 3.5rem;
+	}
 
 	.button {
 		--button-sparks-line-offset: 10px;
 	}
 
 	&-link {
-		height: 4.5rem;
-		width: 4.5rem;
+		height: var(--button-size);
+		width: var(--button-size);
 
 		+ .nav-link {
 			margin-left: -0.75rem;
