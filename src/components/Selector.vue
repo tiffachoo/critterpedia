@@ -1,6 +1,13 @@
 <template>
 	<div class="selector">
+		<label 
+			class="selector-label"
+			:for="id"
+		>
+			{{ label }}
+		</label>
 		<select 
+			:id="id"
 			v-bind="$attrs"
 			class="selector-control"
 			:value="value"
@@ -31,6 +38,8 @@ export default {
 	name: 'CpSelector',
 	inheritAttrs: false,
 	props: {
+		id: String,
+		label: String,
 		options: Array,
 		value: [String, Number]
 	}
@@ -40,19 +49,38 @@ export default {
 <style lang="scss">
 .selector {
 	--selector-color: var(--secondary-color);
+	--selector-label-color: var(--secondary-color-darkest);
 	
 	display: grid;
 	grid-template-columns: 3fr 1fr;
+	grid-template-rows: auto 0.4375rem auto;
+
+	&-label {
+		position: relative;
+		z-index: 2;
+		grid-column: 1 / 3;
+		grid-row: 1 / 3;
+		justify-self: flex-start;
+		padding: var(--spacer-xs) var(--spacer-sm);
+		border-radius: $border-radius;
+		background-color: var(--selector-label-color);
+		font-size: 1rem;
+		font-family: $heading-font-family;
+		color: var(--white);
+	}
+
+	&-arrow,
+	&-control {
+		grid-row: 2 / 4;
+	}
 
 	&-arrow {
 		grid-column: 2 / 3;
-		grid-row: 1;
 		align-self: stretch;
 		justify-self: end;
 		width: 0.875rem;
 		margin: $border-width var(--spacer) $border-width 0;
 		color: var(--selector-color);
-		transition: 0.3s ease-in-out;
 		pointer-events: none;
 
 		&-path {
@@ -62,7 +90,6 @@ export default {
 
 	&-control {
 		grid-column: 1 / 3;
-		grid-row: 1;
 		width: 100%;
 		padding: var(--spacer-sm) var(--spacer);
 		border-radius: $border-radius;

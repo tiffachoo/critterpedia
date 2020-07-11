@@ -12,13 +12,13 @@
 						id="selectMonth"
 						v-model.number="selectedMonth"
 						:options="months"	
-						aria-label="Select a month"
+						label="Month"
 					/>
 					<cp-selector 
 						id="selectLocation"
 						v-model="selectedLocation"
 						:options="locationList"	
-						aria-label="Select a location"
+						label="Location"
 					/>
 					<div class="checkbox-group">
 						<cp-checkbox 
