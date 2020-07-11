@@ -3,7 +3,7 @@
 		<cp-button
 			circle
 			class="nav-link"
-			color="secondary"
+			color="white"
 			to="/bugs"
 			tooltip-text="Bugs"
 		>
@@ -32,7 +32,7 @@
 		<cp-button
 			circle
 			class="nav-link"
-			color="secondary"
+			color="white"
 			to="/fish"
 			tooltip-text="Fish"
 		>
@@ -80,6 +80,7 @@ export default {
 	}
 
 	.button {
+		--button-active-background-color: var(--secondary-color);
 		--button-sparks-line-offset: 10px;
 	}
 
@@ -99,17 +100,17 @@ export default {
 
 .butter-deets-fill,
 .fish-scales-fill {
-	fill: var(--black);
+	fill: var(--secondary-color-darkest);
 }
 
 .butter-wing-fill,
 .fish-fin-fill {
-	fill: var(--white);
+	fill: var(--secondary-color-tint);
 }
 
 .butter-antenna-stroke {
 	fill: none;
-	stroke: var(--black);
+	stroke: var(--secondary-color-darkest);
 	stroke-width: 3;
 	stroke-linecap: round;
 	stroke-miterlimit: 10;
