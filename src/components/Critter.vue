@@ -3,25 +3,31 @@
 		:is="tag"
 		class="critter"
 	>
-		<div 
-			:class="{ 'critter-image-hover': hoverPattern }"
-			class="critter-image-wrap"
+		<component
+			:is="to ? 'router-link' : 'div'"
+			:to="to"
+			class="critter-content"
 		>
 			<div 
-				:style="{ backgroundImage: `url('${image}')`, backgroundPosition }"
-				class="critter-image" 
-			/>
-			<div 
-				v-if="badge"
-				class="critter-badge" 
-			/>
-		</div>
-		<span 
-			v-if="name"
-			class="critter-text"
-		>
-			{{ name }}
-		</span>
+				:class="{ 'critter-image-hover': hoverPattern }"
+				class="critter-image-wrap"
+			>
+				<div 
+					:style="{ backgroundImage: `url('${image}')`, backgroundPosition }"
+					class="critter-image" 
+				/>
+				<div 
+					v-if="badge"
+					class="critter-badge" 
+				/>
+			</div>
+			<span 
+				v-if="name"
+				class="critter-text"
+			>
+				{{ name }}
+			</span>
+		</component>
 	</component>
 </template>
 
@@ -40,7 +46,8 @@ export default {
 		tag: {
 			type: String,
 			default: 'li'
-		}
+		},
+		to: String
 	},
 	computed: {
 		backgroundPosition() {
@@ -59,16 +66,12 @@ export default {
 	--critter-circle-background-color: var(--primary-color);
 	--critter-font-size: 0.875rem;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	padding: var(--spacer);
-	background-color: var(--critter-background-color);
-	text-align: center;
-
 	@media (max-width: $sm - 1) {
 		--critter-size: 4rem;
+	}
+
+	a {
+		text-decoration: none;
 	}
 
 	&-badge {
@@ -114,6 +117,22 @@ export default {
 
 	&-text {
 		font-size: var(--critter-font-size);
+		color: var(--black);
+	}
+
+	&,
+	&-content {
+		display: flex;
+	}
+
+	&-content {
+		flex: 1 0 100%;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		padding: var(--spacer);
+		background-color: var(--critter-background-color);
+		text-align: center;
 	}
 
 	&:hover {

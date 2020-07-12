@@ -131,6 +131,7 @@
 						:badge="checkCritterIsNewMonth(critter['months'][selectedHemis])"
 						:image="critterImage"
 						:name="critter.name"
+						:to="`${$route.params.type}/${critter.id}`"
 					/>
 				</transition-group>
 				<cp-critter-table 
