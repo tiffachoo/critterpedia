@@ -109,6 +109,7 @@ export default {
 		z-index: 1;
 		grid-column: 1 / 3;
 		width: 100%;
+		margin: 0;
 		padding: var(--spacer-sm) var(--spacer);
 		border-radius: $border-radius;
 		border: $border-width solid var(--selector-color);
