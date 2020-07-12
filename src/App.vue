@@ -39,6 +39,7 @@
 				</svg>
 				<svg 
 					class="critter-background-edge-svg"
+					preserveAspectRatio="none"
 					viewBox="0 0 2072 30"
 				>
 					<path 
