@@ -2,10 +2,10 @@
 	<div class="checkbox">
 		<input 
 			:id="id"
-			:checked="checked"
+			:checked="modelValue"
 			class="checkbox-control"
 			type="checkbox"
-			@change="$emit('change', $event.target.checked)"
+			@change="$emit('update:modelValue', $event.target.checked)"
 		/>
 		<component 
 			:is="labelTooltipText ? 'cp-tooltip' : 'label'" 
@@ -29,12 +29,8 @@ export default {
 	components: {
 		CpTooltip
 	},
-	model: {
-		prop: 'checked',
-		event: 'change'
-	},
 	props: {
-		checked: Boolean,
+		modelValue: Boolean,
 		circle: Boolean,
 		id: String,
 		labelTooltipText: String

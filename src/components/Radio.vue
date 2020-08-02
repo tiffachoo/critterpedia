@@ -7,7 +7,7 @@
 			:value="value"
 			class="radio-control"
 			type="radio"
-			@change="$emit('change', $event.target.value)"
+			@change="$emit('update:modelValue', $event.target.value)"
 		/>
 		<component 
 			:is="labelTooltipText ? 'cp-tooltip' : 'label'" 
@@ -30,12 +30,8 @@ export default {
 	components: {
 		CpTooltip
 	},
-	model: {
-		prop: 'valueModel',
-		event: 'change'
-	},
 	props: {
-		valueModel: String,
+		modelValue: String,
 		value: String,
 		id: String,
 		labelTooltipText: String,
@@ -43,7 +39,7 @@ export default {
 	},
 	computed: {
 		isChecked() {
-			return this.valueModel === this.value;
+			return this.modelValue === this.value;
 		}
 	}
 }

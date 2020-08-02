@@ -10,8 +10,8 @@
 			:id="id"
 			v-bind="$attrs"
 			class="selector-control"
-			:value="value"
-			@input="$emit('input', $event.target.value)"
+			:value="modelValue"
+			@input="$emit('update:modelValue', $event.target.value)"
 		>
 			<option 
 				v-for="option in options"
@@ -41,7 +41,7 @@ export default {
 		id: String,
 		label: String,
 		options: Array,
-		value: [String, Number]
+		modelValue: [String, Number]
 	}
 }
 </script>
