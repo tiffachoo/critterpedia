@@ -1,9 +1,9 @@
-import Vue from 'vue';
-import Router from 'vue-router';
+import { createRouter, createWebHistory} from 'vue-router';
 import List from './pages/CritterList.vue';
 import Detail from './pages/CritterDetail.vue';
 
-export default new Router({
+export const router = createRouter({
+	history: createWebHistory(),
 	routes: [
 		{
 			path: '/',
@@ -20,5 +20,3 @@ export default new Router({
 	],
 	linkExactActiveClass: 'active'
 });
-
-Vue.use(Router);
