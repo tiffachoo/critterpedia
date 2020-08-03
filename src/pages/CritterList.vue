@@ -10,7 +10,7 @@
 				<div class="critter-list-filter">
 					<cp-selector 
 						id="selectMonth"
-						v-model.number="selectedMonth"
+						v-model.number="selectedMonthModel"
 						:options="months"	
 						label="Month"
 					/>
@@ -176,7 +176,7 @@ export default {
 			selectedHemis: 'north',
 			selectedLayout: 'grid',
 			selectedLocation: null,
-			selectedMonth: 1,
+			selectedMonthModel: 1,
 			months: [
 				{
 					value: 1,
@@ -230,6 +230,10 @@ export default {
 		}
 	},
 	computed: {
+		selectedMonth() {
+			// fix for missing v-model number modifier (?)
+			return parseInt(this.selectedMonthModel);
+		},
 		displayedCritters() {
 			const currentTime = new Date().getHours();
 			
@@ -290,7 +294,7 @@ export default {
 		}
 	},
 	beforeMount() {
-		this.selectedMonth = new Date().getMonth() + 1;
+		this.selectedMonthModel = new Date().getMonth() + 1;
 	},
 	created() {
 		this.getCritters();
